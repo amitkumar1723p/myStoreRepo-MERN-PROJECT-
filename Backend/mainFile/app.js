@@ -7,13 +7,12 @@ import AdminAndDbOwnerRoutes from "../Routes/admin and owner Routes.js";
 import OwnerRoutes from "../Routes/ownerRoutes.js";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
-
+import dotenv from "dotenv";
 import cloudinary from "cloudinary";
-
+import cors from "cors";
 const app = express();
 
 if (process.env.PRODUCTION !== "true") {
-  import dotenv from "dotenv";
   const envFilepath = join(process.cwd(), "Backend", "Config", ".env");
   dotenv.config({ path: envFilepath });
 }
@@ -32,7 +31,6 @@ process.on("uncaughtException", (err) => {
 
 //  Configuration .env File
 if (process.env.PRODUCTION !== "true") {
-  import cors from "cors";
   app.use(
     cors({
       origin: process.env.FRONTENT_SIDE_URL,
