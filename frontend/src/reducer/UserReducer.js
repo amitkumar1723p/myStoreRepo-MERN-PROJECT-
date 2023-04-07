@@ -76,8 +76,6 @@ import {
   Owner_Admin_updateRole_Fail,
   Owner_Admin_updateRole_Clear,
 } from "../Constant/UserConstant";
-// const backendport = "http://localhost:5000"
-const backendport = process.env.REACT_APP_BackendPort;
 
 //  Create User
 export const CreateUserReducer = (state = {}, action) => {

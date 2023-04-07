@@ -67,7 +67,6 @@ import {
   Owner_Admin_updateRole_Fail,
 } from "../Constant/UserConstant";
 
-const backendport = process.env.REACT_APP_BackendPort;
 
 //  User Eamil Verify
 export const UserEmailVefify = (userdata, id) => {
@@ -84,7 +83,7 @@ export const UserEmailVefify = (userdata, id) => {
       };
       if (id) {
         const { data } = await axios.post(
-          `${backendport}/user/emailverify?id=${id}`,
+          `/user/emailverify?id=${id}`,
           userdata,
           config
         );
@@ -92,7 +91,7 @@ export const UserEmailVefify = (userdata, id) => {
         dispatch({ type: EmailVerifySuccess, payload: data });
       } else {
         const { data } = await axios.post(
-          `${backendport}/user/emailverify`,
+          `/user/emailverify`,
           userdata,
           config
         );
@@ -127,7 +126,7 @@ export const OtpVerify = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/otpverifycreateuser`,
+        `/user/otpverifycreateuser`,
         userdata,
         config
       );
@@ -160,7 +159,7 @@ export const CreateUser = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/register`,
+        `/user/register`,
         userdata,
         config
       );
@@ -194,7 +193,7 @@ export const FindUser = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/forgetEmail/finduser`,
+        `/user/forgetEmail/finduser`,
         userdata,
         config
       );
@@ -230,7 +229,7 @@ export const SendNewEmail = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/forgetEmail/newemail`,
+        `/user/forgetEmail/newemail`,
         userdata,
         config
       );
@@ -267,7 +266,7 @@ export const ForgotEmailOtpVerify = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/otpverify/changeemailid`,
+        `/user/otpverify/changeemailid`,
         userdata,
         config
       );
@@ -309,7 +308,7 @@ export const ForgetPasswordSendEmailAction = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/forgetpassword/sendcode`,
+        `/user/forgetpassword/sendcode`,
         userdata,
         config
       );
@@ -346,7 +345,7 @@ export const ForgotPasswordOtpVerifyAction = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/forgetpassword/resiveotp`,
+        `/user/forgetpassword/resiveotp`,
         userdata,
         config
       );
@@ -382,7 +381,7 @@ export const NewPassword = (userdata) => {
       };
 
       const { data } = await axios.put(
-        `${backendport}/user/forgetpassword`,
+        `/user/forgetpassword`,
         userdata,
         config
       );
@@ -422,7 +421,7 @@ export const LoginuserAction = (userdata) => {
 
       // const { data } = await axios.post(`${process.env.BackendPort}/user/login`, userdata, config)
       const { data } = await axios.post(
-        `${backendport}/user/login`,
+        `/user/login`,
         userdata,
         config
       );
@@ -455,7 +454,7 @@ export const GetMeDetails = () => {
         withCredentials: true,
       };
 
-      const { data } = await axios.get(`${backendport}/user/medetail`, config);
+      const { data } = await axios.get(`/user/medetail`, config);
       dispatch({ type: MeDetailsSuccess, payload: data });
     } catch (error) {
       if (error.response) {
@@ -482,7 +481,7 @@ export const LogoutUserAction = () => {
         withCredentials: true,
       };
 
-      const { data } = await axios.get(`${backendport}/user/logout`, config);
+      const { data } = await axios.get(`/user/logout`, config);
       dispatch({ type: UserLogoutSuccess, payload: data });
     } catch (error) {
       if (error.response) {
@@ -512,7 +511,7 @@ export const ChangePasswordAction = (userdata) => {
       };
 
       const { data } = await axios.put(
-        `${backendport}/user/changepassword`,
+        `/user/changepassword`,
         userdata,
         config
       );
@@ -546,7 +545,7 @@ export const ChangeEmailAction = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/changeEmail/newemail`,
+        `/user/changeEmail/newemail`,
         userdata,
         config
       );
@@ -581,7 +580,7 @@ export const ChangeEmailOtpVerifyAction = (userdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/otpverify/changeemailid`,
+        `/user/otpverify/changeemailid`,
         userdata,
         config
       );
@@ -618,7 +617,7 @@ export const EditProfileAction = (userdata) => {
       };
 
       const { data } = await axios.put(
-        `${backendport}/user/updateprofile`,
+        `/user/updateprofile`,
         userdata,
         config
       );
@@ -652,7 +651,7 @@ export const DeleteProfileAction = () => {
       };
 
       const { data } = await axios.delete(
-        `${backendport}/user/deleteprofile`,
+        `/user/deleteprofile`,
         config
       );
 
@@ -686,7 +685,7 @@ export const Admin_Owner_GetAllUserAction = () => {
       };
 
       const { data } = await axios.get(
-        `${backendport}/admin/owner/findalluser`,
+        `/admin/owner/findalluser`,
         config
       );
 
@@ -724,7 +723,7 @@ export const Admin_Owner_DelteUserProfileAction = (userId) => {
       };
 
       const { data } = await axios.delete(
-        `${backendport}/admin/owner/deleteuser/${userId}`,
+        `/admin/owner/deleteuser/${userId}`,
         config
       );
 
@@ -760,7 +759,7 @@ export const Admin_Owner_UpdateUserRole = (UserRole, userId) => {
       };
       // owner/updaterole/63f1c283550d5d702c2951515
       const { data } = await axios.put(
-        `${backendport}/owner/updaterole/${userId}`,
+        `/owner/updaterole/${userId}`,
         UserRole,
         config
       );

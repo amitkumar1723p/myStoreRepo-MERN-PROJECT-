@@ -20,9 +20,6 @@ import {
   Admin_Owner_DeleteOrder_Clear,
 } from "../Constant/OrderConstant";
 
-//   Create New Order
-const backendport = process.env.REACT_APP_BackendPort;
-
 //  Get All Order By User
 export const GetAllOrderUserAction = () => {
   return async (dispatch) => {
@@ -33,10 +30,7 @@ export const GetAllOrderUserAction = () => {
         withCredentials: true,
       };
 
-      const { data } = await axios.get(
-        `${backendport}/user/meallorders`,
-        config
-      );
+      const { data } = await axios.get(`/user/meallorders`, config);
       dispatch({ type: GetUserOrderSuccess, payload: data });
     } catch (error) {
       if (error.response) {
@@ -62,7 +56,7 @@ export const GetSingleOrderUserAction = (OrderId) => {
       };
 
       const { data } = await axios.get(
-        `${backendport}/user/getsingleorder/${OrderId}`,
+        `/user/getsingleorder/${OrderId}`,
         config
       );
       dispatch({ type: GetUserSingleOrderSuccess, payload: data });
@@ -91,10 +85,7 @@ export const Admin_Owner_GetAllUserOrdersAction = () => {
         withCredentials: true,
       };
 
-      const { data } = await axios.get(
-        `${backendport}/admin/owner/getalluserorders`,
-        config
-      );
+      const { data } = await axios.get(`/admin/owner/getalluserorders`, config);
       dispatch({ type: Admin_Owner_GetAllUserOrders_Success, payload: data });
     } catch (error) {
       if (error.response) {
@@ -122,7 +113,7 @@ export const Admin_Owner_OrderProcess = (OrderProcess, orderId) => {
         withCredentials: true,
       };
       const { data } = await axios.put(
-        `${backendport}/admin/owner/updateprocessorder/${orderId}`,
+        `/admin/owner/updateprocessorder/${orderId}`,
         OrderProcess,
         config
       );
@@ -154,7 +145,7 @@ export const Admin_Owner_DelelteOrder = (orderId) => {
         withCredentials: true,
       };
       const { data } = await axios.delete(
-        `${backendport}/admin/owner/deleteorder/${orderId}`,
+        `/admin/owner/deleteorder/${orderId}`,
         config
       );
 

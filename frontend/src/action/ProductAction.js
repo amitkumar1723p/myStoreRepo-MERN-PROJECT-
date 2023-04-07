@@ -32,8 +32,7 @@ import {
   Delete_Review_Fail,
   Delete_Review_Clear,
 } from "../Constant/ProductContanst";
-// const backendport = "http://localhost:5000"
-const backendport = process.env.REACT_APP_BackendPort;
+
 
 //  Get Prodcuts Action
 
@@ -42,7 +41,7 @@ export const GetSampleProductsAction = ({ Categories, NumOfProducts }) => {
     try {
       dispatch({ type: Sample_Products_Request });
       const { data } = await axios.get(
-        `${backendport}/user/getsampleProducts?NumOfProducts=${NumOfProducts}&Categories=${Categories}`,
+        `/user/getsampleProducts?NumOfProducts=${NumOfProducts}&Categories=${Categories}`,
         {
           withCredentials: true,
         }
@@ -81,7 +80,7 @@ export const GetAllProducts = (querry) => {
 
       if (querry.price) {
         const { data } = await axios.get(
-          `${backendport}/user/getallproduct?pagenumber=${querry.pageNo}&perpageresult=${querry.numofproduct}&price[$lte]=${querry.price[1]}&price[$gte]=${querry.price[0]}&keyword=${querry.keyword}`,
+          `/user/getallproduct?pagenumber=${querry.pageNo}&perpageresult=${querry.numofproduct}&price[$lte]=${querry.price[1]}&price[$gte]=${querry.price[0]}&keyword=${querry.keyword}`,
           {
             withCredentials: true,
           }
@@ -90,7 +89,7 @@ export const GetAllProducts = (querry) => {
       } else {
         if (querry.category) {
           const { data } = await axios.get(
-            `${backendport}/user/getallproduct?pagenumber=${querry.pageNo}&perpageresult=${querry.numofproduct}&allratingsAvg[$gte]=${querry.rating}&category=${querry.category}&keyword=${querry.keyword}`,
+            `/user/getallproduct?pagenumber=${querry.pageNo}&perpageresult=${querry.numofproduct}&allratingsAvg[$gte]=${querry.rating}&category=${querry.category}&keyword=${querry.keyword}`,
             {
               withCredentials: true,
             }
@@ -98,7 +97,7 @@ export const GetAllProducts = (querry) => {
           dispatch({ type: All_Products_Success, payload: data });
         } else {
           const { data } = await axios.get(
-            `${backendport}/user/getallproduct?pagenumber=${querry.pageNo}&perpageresult=${querry.numofproduct}&allratingsAvg[$gte]=${querry.rating}&keyword=${querry.keyword}`,
+            `/user/getallproduct?pagenumber=${querry.pageNo}&perpageresult=${querry.numofproduct}&allratingsAvg[$gte]=${querry.rating}&keyword=${querry.keyword}`,
             {
               withCredentials: true,
             }
@@ -133,7 +132,7 @@ export const GetHighestAndLowestPriceProduct = () => {
       };
 
       const { data } = await axios.get(
-        `${backendport}/user/highest-lowestprice/product`,
+        `/user/highest-lowestprice/product`,
         config
       );
 
@@ -171,10 +170,7 @@ export const GetAllProductsName = () => {
         withCredentials: true,
       };
 
-      const { data } = await axios.get(
-        `${backendport}/user/getallProductname`,
-        config
-      );
+      const { data } = await axios.get(`/user/getallProductname`, config);
 
       dispatch({ type: All_Products_Name_Success, payload: data });
     } catch (error) {
@@ -208,10 +204,7 @@ export const GetSingleProductAction = (id) => {
         withCredentials: true,
       };
 
-      const { data } = await axios.get(
-        `${backendport}/user/singleproduct/${id}`,
-        config
-      );
+      const { data } = await axios.get(`/user/singleproduct/${id}`, config);
 
       dispatch({ type: Get_Single_Products_Details_Success, payload: data });
     } catch (error) {
@@ -245,11 +238,11 @@ export const CreateReviewAction = (reviewdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/user/createreviews/product`,
+        `/user/createreviews/product`,
         reviewdata,
         config
       );
-      // const { data } = await axios.post(`${backendport}/user/login`, userdata, config)
+      // const { data } = await axios.post(`/user/login`, userdata, config)
 
       dispatch({ type: SubmitReview_Success, payload: data });
     } catch (error) {
@@ -280,11 +273,10 @@ export const CreateproductAction = (productdata) => {
       };
 
       const { data } = await axios.post(
-        `${backendport}/admin/owner/createproducts`,
+        `/admin/owner/createproducts`,
         productdata,
         config
       );
-      // const { data } = await axios.post(`${backendport}/user/login`, userdata, config)
 
       dispatch({ type: CreateProduct_Success, payload: data });
     } catch (error) {
@@ -313,7 +305,7 @@ export const DeleteProductAction = (ProductId) => {
       };
 
       const { data } = await axios.delete(
-        `${backendport}/admin/owner/deleteproduct/${ProductId}`,
+        `/admin/owner/deleteproduct/${ProductId}`,
         config
       );
 
@@ -346,11 +338,11 @@ export const UpdateProductAction = (productdata, productId) => {
       };
 
       const { data } = await axios.put(
-        `${backendport}/admin/owner/updateproduct/${productId}`,
+        `/admin/owner/updateproduct/${productId}`,
         productdata,
         config
       );
-      // const { data } = await axios.post(`${backendport}/user/login`, userdata, config)
+      // const { data } = await axios.post(`/user/login`, userdata, config)
 
       dispatch({ type: UpdateProduct_Success, payload: data });
     } catch (error) {
@@ -381,7 +373,7 @@ export const DeleteReviewAction = (productId, ReviewId) => {
       };
 
       const { data } = await axios.delete(
-        `${backendport}/admin/owner/deletereviews/?ProductId=${productId}&ReviewId=${ReviewId}`,
+        `/admin/owner/deletereviews/?ProductId=${productId}&ReviewId=${ReviewId}`,
         config
       );
 

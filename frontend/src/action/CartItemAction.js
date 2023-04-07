@@ -8,7 +8,6 @@ SaveShippingInfo,
 } from '../Constant/CartConstant'
  import axios from 'axios'
 
- const backendport = process.env.REACT_APP_BackendPort
 
  export const AddtoCartAction =(productId,ProductQuantity)=>{
     return async (dispatch ,getState)=>{ 
@@ -23,7 +22,7 @@ SaveShippingInfo,
               withCredentials: true }
  
 
-        const { data } = await axios.get(`${backendport}/user/singleproduct/${productId}`, config)  
+        const { data } = await axios.get(`/user/singleproduct/${productId}`, config)  
   
          let cartData ={
             productId:  data.findproduct._id ,
