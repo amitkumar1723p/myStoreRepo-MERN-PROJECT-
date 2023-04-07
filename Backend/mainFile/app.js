@@ -54,9 +54,10 @@ app.use("/owner", OwnerRoutes);
 app.use(express.static(join(process.cwd(), "frontend", "build")));
 
 app.get("*", function (req, res) {
-  res.sendFile("frontend/build/index.html", { root: join(process.cwd()) });
+  res.sendFile(join(process.cwd(), "frontend", "build", "index.html"), {
+    root: join(process.cwd()),
+  });
 });
-
 //    Server Listen Code .
 const port = process.env.PORT;
 let server = app.listen(port);
