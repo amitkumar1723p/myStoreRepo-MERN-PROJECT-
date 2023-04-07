@@ -1,0 +1,257 @@
+.forgotemailmain {
+    /* overflow: hidden; */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.forgotemailsecond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.forgotemailContainer,
+.forgotemailotpverifyContainer,
+.finduserContainer {
+    padding: 25px 0;
+    border-radius: 8px;
+    width: 50vw;
+    background-color: #efefef;
+    position: relative;
+    margin: auto;
+    transition: all .50s linear;
+    flex-shrink: 0;
+
+}
+
+.forgotemail>div,
+.forgotemailotpverify>div,
+.finduser>div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+
+
+.forgotemail>div>input,
+.forgotemailotpverify>div>input,
+.finduser>div>input {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 8px 10px 68px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #526dfa5e;
+
+}
+
+.forgotemail>div>label,
+.forgotemailotpverify>div>label,
+.finduser>div>label {
+    position: absolute;
+    outline: 1px;
+    left: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+
+.finduser_show-hidepassword {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+.forgotemailotptext {
+
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.forgotemailresendotp {
+    text-align: end;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forgotemailotptime {
+    font-size: .9em;
+}
+
+.forgotemailheading {
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.submitdetailagain {
+    text-align: end;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 5px;
+
+
+}
+
+#finduserpassword {
+    padding-right: 40px;
+}
+
+
+.forgotemailotpverify>button,
+.forgotemail>button,
+.finduser>button {
+    background: #0029ffa8;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 1.4em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+
+
+
+
+.forgotemailotpverify>button:hover,
+.forgotemail>button:hover,
+.finduser>button:hover {
+    background: #1d3fe8d5;
+}
+
+
+
+.forgotemailotpverify>button:active,
+.forgotemail>button:active,
+.finduser>button:active {
+    background: #002aff96;
+
+}
+
+
+.forgotemailotpverify,
+.forgotemail,
+.finduser {
+    width: 80%;
+    margin: auto;
+}
+
+.finduserContainer input::-webkit-inner-spin-button,
+.finduserContainer input::-webkit-outer-spin-button,
+.forgotemailotpverify input::-webkit-outer-spin-button,
+.forgotemailotpverify input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.forgotemailotpverify input[type=number],
+.finduserContainer input[type=number],
+.forgotemailotpverify input[type=number] {
+    --moz-appearance: none;
+}
+
+.changeEmailLoading {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Loader  */
+.finduserloading {
+    width: 130px;
+    height: 130px;
+}
+
+@media screen and (min-width:0px) and (max-width:1000px) {
+
+
+
+    .forgotemailContainer,
+    .forgotemailotpverifyContainer,
+    .finduserContainer {
+        width: 80vw;
+    }
+
+    .forgotemailotpverify,
+    .forgotemail,
+    .finduser {
+        width: 92%;
+    }
+
+}
+
+
+
+@media screen and (min-width:0px) and (max-width:600px) {
+    .forgotemailmain {
+        padding-top: 20px;
+        font-size: 13px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .forgotemailContainer,
+    .forgotemailotpverifyContainer,
+    .finduserContainer {
+        width: 100%;
+    }
+
+    .forgotemail>div>label>svg,
+    .forgotemailotpverify>div>label>svg,
+    .finduser>div>label>svg,
+    .finduser_show-hidepassword>svg {
+        font-size: 20px;
+    }
+
+    .forgotemail>div>label,
+    .forgotemailotpverify>div>label,
+    .finduser>div>label {
+        left: 5px;
+
+    }
+
+    .forgotemailotpverify,
+    .forgotemail,
+    .finduser {
+        width: 95%;
+    }
+
+    .forgotemail>div>input,
+    .forgotemailotpverify>div>input,
+    .finduser>div>input {
+        padding-left: 29px;
+    }
+
+    #finduserpassword {
+        padding-right: 32px;
+    }
+
+    .changeEmailLoading {
+        width: 100px;
+        height: 100px;
+    }
+
+    .finduserloading {
+        width: 100px;
+        height: 100px;
+    }
+
+}

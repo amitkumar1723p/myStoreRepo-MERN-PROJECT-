@@ -1,0 +1,265 @@
+.Dashboardmain {
+    display: flex;
+}
+
+.DashboardContent {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.totalAmount {
+    margin: auto 20px;
+    padding: 7px 0;
+    color: white;
+    font-weight: bold;
+    margin: auto 20px;
+    background-color: #004a6a;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+
+.DashboardContent>h1 {
+    overflow-wrap: anywhere !important;
+    margin: auto;
+    width: 70%;
+    font-size: 2.3em;
+    padding-bottom: 11px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.totalAmount>p {
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.circleContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+
+.circleContainer>div>div {
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    width: 260px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    margin: 0 15px;
+    border-radius: 100%;
+    height: 260px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_Circle {
+    background-color: red;
+}
+
+.order_Circle {
+    background-color: green;
+}
+
+.user_Circle {
+    background-color: blue;
+    cursor: pointer;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.user_Circle:hover>.smallCircleContainer {
+    display: flex;
+
+}
+
+.user_Circle:hover>.totalUser {
+    display: none;
+}
+
+
+.smallCircle1 {
+    margin-right: 10px;
+    background-color: rgb(0, 156, 167);
+}
+
+.smallCircle3 {
+    /* align-self: flex-start; */
+    background-color: rgb(133, 0, 145);
+}
+
+.smallCircle2 {
+    background-color: rgb(224, 101, 0);
+}
+
+
+
+.smallCircle {
+    font-size: .7em !important;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: anywhere;
+}
+
+.smallCircleContainer {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 12%;
+}
+
+.circleContainerChild {
+    margin: 30px 20px auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.doughnutChart {
+
+    box-shadow: 0px 0px 5px black;
+    margin: auto;
+    margin-top: 50px;
+    width: 400px;
+    background-color: #fbfbfb;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.doughnut {
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media screen and (min-width:0px) and (max-width:1000px) {
+
+    .Dashboardmain {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dashboardaside {
+        position: absolute;
+        margin: 0;
+        top: 40px;
+        transition: all .2s linear;
+    }
+
+    .dashboardasideContainer {
+        z-index: 2;
+        align-self: flex-start;
+        height: 1px;
+        padding: 0;
+        min-height: 1px;
+        left: 10px;
+        top: 80px;
+    }
+
+    .DashboardContent {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .totalAmount {
+        margin: auto;
+    }
+
+    .circleContainer>div>div {
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .smallCircle {
+        width: 80px;
+        height: 80px;
+        font-size: .6em !important;
+    }
+
+
+
+    .doughnutChart {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:600px) {
+    .dashboardasideContainer {
+        top: 159px;
+        font-size: 14px;
+    }
+
+    .DashboardContent {
+        font-size: 14px;
+    }
+
+    .dashboardaside {
+        min-width: 230px;
+    }
+
+    .doughnutChart {
+        width: 60vw;
+    }
+
+    .circleContainer>div>div {
+
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .circleContainerChild {
+        flex-direction: column;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:400px) {
+    .doughnutChart {
+        width: 80vw;
+
+    }
+
+    .DashboardContent>h1 {
+        width: auto;
+        margin-top: 30px;
+    }
+
+    .circleContainer>div>div {
+        width: 170px;
+        height: 170px;
+    }
+
+    .dashboardaside {
+        min-width: 60vw;
+    }
+
+    .smallCircle {
+        width: 64px;
+        height: 68px;
+    }
+
+}

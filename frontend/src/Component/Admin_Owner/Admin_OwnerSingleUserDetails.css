@@ -1,0 +1,99 @@
+.SingleUserProfileheading {
+    padding-bottom: 30px;
+    margin: auto;
+    border-bottom: 1px solid black;
+    width: 60%;
+    text-align: center;
+    font-size: 2.3em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.SingleUserProfileContainer {
+    display: flex;
+    justify-content: space-evenly;
+
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.SingleUserimagebox {
+    width: 300px;
+}
+
+.SingleUserimagebox>img {
+    text-align: center;
+    width: 100%;
+    max-height: 70vh;
+    border-radius: 100%;
+    box-shadow: 0px 0px 3px 0px black;
+    cursor: pointer;
+
+}
+
+
+.SingleUserDetails>div>p:first-child {
+
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.SingleUserDetails>div {
+    margin-bottom: 20px;
+}
+
+
+.SingleUserDetails>div>p:nth-child(2) {
+    color: rgb(30, 29, 29);
+    font-size: 1em;
+}
+
+.SingleUserDetails {
+    max-width: 45vw;
+    overflow-wrap: anywhere;
+}
+
+ 
+@media screen and (min-width:0px) and (max-width:800px) {
+
+    .SingleUserProfileContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .SingleUserDetails {
+        margin-top: 40px;
+        max-width: 90% !important;
+
+
+    }
+
+    .SingleUserProfileheading {
+        width: 90%;
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (min-width:0px) and (max-width:350px) {
+    .SingleUserimagebox {
+        width: 80vw;
+
+    }
+
+    .SingleUserProfileContainer {
+        font-size: 13px;
+    }
+
+    .SingleUserProfileheading {
+        font-size: 2em;
+        padding-bottom: 15px;
+        margin-top: 75px;
+        padding-left: 4px;
+        padding-right: 4px;
+        width: auto;
+    }
+
+}

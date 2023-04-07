@@ -1,0 +1,140 @@
+.paymentMain {
+    margin: 10px 105px auto auto;
+    width: 85vw;
+}
+
+.formContainer {
+    padding: 25px 0;
+    border-radius: 8px;
+    width: 55%;
+    background-color: #efefef;
+    position: relative;
+    margin: 40px auto;
+    transition: all .50s linear;
+}
+
+.paymentForm>div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+
+}
+
+.Payment_Input {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 8px 10px 68px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #526dfa5e;
+    min-height: 21px;
+
+}
+
+.Payment_Input_label {
+    position: absolute;
+    outline: 1px;
+    left: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.paymentForm>button {
+    background: #0029ffa8;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 1.4em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.paymentForm {
+    width: 80%;
+    margin: auto;
+    overflow-wrap: anywhere;
+    ;
+}
+
+
+.paymentForm>h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.Payment_Input_First {
+    margin-bottom: 1px !important;
+}
+
+.cardNumber {
+    font-size: .8em;
+    margin-left: 10px;
+}
+
+.cardNumber>span {
+    font-weight: bold;
+}
+
+.paymentForm>button:hover {
+    background: #1d3fe8d5;
+}
+
+.paymentForm>button:active {
+    background: #002aff96;
+}
+
+.paymentLoading {
+    width: 40px;
+    height: 40px;
+    border-left: 2px solid #850000;
+}
+
+@media screen and (min-width:0px) and (max-width:1000px) {
+    .paymentMain {
+        margin: 10px 105px auto 15px;
+    }
+
+    .formContainer {
+        width: 85%;
+    }
+
+
+    .Payment_Input {
+        padding-left: 38px;
+    }
+
+    .paymentForm {
+        width: 95%;
+    }
+
+    .Payment_Input_label {
+        left: 6px;
+    }
+}
+
+
+@media screen and (min-width:0px) and (max-width:505px) {
+    .paymentMain {
+        width: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .formContainer {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .cardNumber {
+        font-size: 1em;
+    }
+
+}

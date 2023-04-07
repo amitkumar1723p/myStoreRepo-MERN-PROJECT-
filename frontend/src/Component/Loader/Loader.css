@@ -1,0 +1,37 @@
+ .Loader {
+
+     background-color: rgba(161, 2, 2, 0);
+     border-radius: 100%;
+     border-left: 5px solid #0010f7;
+     margin: auto;
+     position: relative;
+
+
+     animation-name: rotation;
+     animation-duration: 1s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+ }
+
+
+
+ @keyframes rotation {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+
+ }
+
+
+
+ /* Loading Classs  */
+ .headingloading {
+     margin-top: 20px;
+     margin-bottom: 20px;
+     width: 200px;
+     height: 200px;
+ }

@@ -1,0 +1,722 @@
+/* Image Slider Css */
+
+
+.imageSlide {
+    display: flex;
+    overflow: hidden;
+    border-radius: 7px;
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+    min-width: 100%;
+
+
+}
+
+.slider {
+    min-width: 100%;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 7px;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .40s;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-height: 75vh;
+
+
+}
+
+.imagecount {
+    position: absolute;
+    background-color: #00000054;
+    top: 0;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .40s;
+    box-sizing: border-box;
+    width: 19px;
+    border-radius: 100%;
+    text-align: center;
+    margin: auto;
+    left: 50%;
+    color: white;
+}
+
+.nextbutton,
+.previousbutton {
+    border: 1px solid #ff000029;
+    box-shadow: inset 1px 0px 11px #ff000029;
+    background: #e5dddd42;
+    border-radius: 100%;
+    position: absolute;
+    cursor: pointer;
+    width: 42px;
+    height: 39px;
+
+
+}
+
+.nextbutton>p,
+.previousbutton>p {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    background-color: #ffffffde;
+
+}
+
+
+
+.previousbutton {
+    left: 10px;
+}
+
+.nextbutton {
+    right: 10px;
+}
+
+.previousbutton>p {
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+
+.nextbutton>p {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+
+
+
+.dotbox {
+    color: white;
+    position: absolute;
+    padding: 1px 7px;
+    top: 0;
+    right: 6px;
+    background: #00000052;
+    font-size: .9em;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.dotbox>div {
+    display: flex;
+}
+
+
+
+.dotbox>div>p {
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: .40s;
+    padding: 1px 6px;
+    border-radius: 100%;
+    margin: 4px 6px;
+    color: white;
+
+}
+
+
+
+
+
+
+
+/* Product Image Container  */
+.singleProductImage {
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 7px;
+    width: 330px;
+    box-shadow: 1px 3px 6px 0px #0000005c;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+/* Loading Css  */
+.SingleProductDetailLoading {
+    width: 200px;
+    height: 200px;
+    /* top: 10px; */
+    /* left: 50px; */
+}
+
+.cartLoader {
+    width: 40px;
+    height: 40px;
+
+    margin-left: 50px !important;
+    border-left: 3px solid blue;
+    margin-left: 25px;
+}
+
+.content_container {
+    width: 95vw;
+    margin: auto;
+
+}
+
+.singleProductContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 55px;
+    margin-bottom: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.singleproductheading {
+    font-size: 2.3em;
+    width: 50vw;
+    text-align: center;
+    border-bottom: 1px solid;
+    margin: auto;
+    margin: 62px auto auto;
+    padding-bottom: 12px;
+}
+
+
+/* Product Details Container / */
+.singleProductDetails {
+    width: 50%;
+    overflow: hidden;
+    padding: 10px;
+
+}
+
+.singleProductDetails>div {
+    overflow-wrap: break-word;
+}
+
+
+.productname_id>p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.productname>small {
+    font-size: .7em;
+}
+
+.productReviews {
+    border-top: 1px solid #00000054;
+    border-bottom: 1px solid #00000054;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.singleProductRating {
+    color: red !important;
+    padding: 0px 10px;
+    color: black;
+}
+
+.NumofReviews {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+.productPrice {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.productAddtoCart {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.productAddtoCart>button:nth-child(1),
+.productAddtoCart>button:nth-child(3) {
+    font-size: 2em;
+    background: #655858;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s linear;
+    border: none;
+}
+
+.productAddtoCart P:nth-child(2) {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 1.5em;
+    margin: 0px 1px;
+    font-weight: bold;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.productAddtoCart>button:nth-child(1):hover,
+.productAddtoCart>button:nth-child(3):hover {
+    background: #241d1dfa;
+}
+
+.productAddtoCart>button:nth-child(1):active,
+.productAddtoCart>button:nth-child(3):active {
+    background: #655858;
+}
+
+.productdetailbutton {
+
+    padding: 6px 16px;
+    background: #0029ffa8;
+    font-size: 1em;
+    margin-left: 29px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 19px;
+    transition: all .3s linear;
+}
+
+.productdetailbutton:hover {
+    background: #0f35f9;
+}
+
+.productdetailbutton:active {
+    background: #002aff96;
+    ;
+}
+
+.productStatus {
+    overflow-wrap: break-word;
+    border-top: 1px solid #00000054;
+    border-bottom: 1px solid #00000054;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    /*  new */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.productStatus>span {
+    margin-left: 4px;
+}
+
+
+
+
+.productdescription {
+    padding-bottom: 10px;
+    margin-top: 25px;
+    border-bottom: 1px solid #00000054;
+}
+
+
+.productdescription>p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.productdescription>small {
+    font-size: .9em;
+}
+
+.submitreview {
+    margin-left: 0;
+
+}
+
+.submitreview:hover {
+    padding: 9px 19px;
+}
+
+.submitreviewbox {
+    margin-top: 25px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+
+
+}
+
+.reviewbox:hover>.reviewbox_deleteButton {
+    display: block !important;
+}
+
+.reviewbox_deleteButton {
+    display: none !important;
+    margin: auto;
+    margin-bottom: 10px;
+
+    color: rgb(58, 0, 182);
+    cursor: pointer;
+    font-size: 1.5em !important;
+}
+
+.reviewbox_deleteButton:hover {
+
+    color: rgb(87 114 255);
+
+    font-size: 1.6em !important;
+}
+
+.reviewbox_deleteButton:active {
+    color: rgb(58, 0, 182);
+}
+
+.submitreviewMain {
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 8px 0px black;
+    border-radius: 10px;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .50s linear;
+}
+
+
+
+.submitreviewForm {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.submitreviewForm>textarea {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    min-width: 100%;
+    min-height: 23vh;
+    max-height: 23vh;
+    max-width: 100%;
+    font-size: 1.1em;
+    padding: 9px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.setReviewRating {
+    color: red !important;
+    font-size: 2.5em !important;
+}
+
+
+
+.submitreviewbuttonbox {
+    display: flex;
+    width: 100%;
+
+}
+
+.submitreviewbuttonbox>button,
+.cancelbutton {
+    background: #0029ffa8;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 1.1em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.submitreviewbuttonbox>button:hover {
+    background: #1d3fe8d5;
+
+}
+
+.submitreviewbuttonbox>button:active {
+    background: #0029ffa8;
+
+}
+
+.cancelbutton {
+    background: #ff0000e3;
+}
+
+.cancelbutton:hover {
+    background: #a30000e3;
+}
+
+.cancelbutton:active {
+    background: #ff0000e3;
+}
+
+.reviewheading {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.reviewContainer {
+    text-align: center;
+}
+
+.reviewLoading {
+    width: 150px;
+    height: 150px;
+}
+
+.showreview-container {
+    box-shadow: 0px 0px 5px 0px black;
+    max-width: 80vw;
+    margin: auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.showAllreview_container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    overflow-x: auto;
+}
+
+
+
+.reviewbox {
+    font-size: 1.1em;
+    background: #ffffff;
+    padding: 12px 20px;
+    text-align: center;
+    margin: 25px;
+    overflow-wrap: break-word;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #080404b3;
+    min-width: 350px;
+    max-width: 350px;
+    position: relative;
+}
+
+.showreview-container>h1 {
+    padding-bottom: 12px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 15px 25px 10px 25px;
+}
+
+.userId {
+    font-size: .7em;
+}
+
+.reviewbox>p {
+    margin-bottom: 5px;
+}
+
+.comment {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+
+.reviewbox_rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (min-width:0px) and (max-width:950px) {
+    .singleProductContainer {
+        flex-direction: column;
+        /* background-color: blue;/ */
+
+    }
+
+    .singleProductImage {
+        margin-bottom: 40px;
+    }
+
+    .singleproductheading {
+        margin-top: 30px;
+
+        font-size: 2em;
+        width: auto;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .reviewbox {
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    .showreview-container>h1 {
+        padding: 0px 30px;
+    }
+
+    .submitreviewMain {
+        padding: 18px;
+        width: 35vw;
+    }
+
+    .setReviewRating {
+        font-size: 2.2em !important;
+    }
+
+
+    .singleProductDetails {
+        width: 81%;
+    }
+
+    .submitreviewMain {
+        width: 50vw;
+
+    }
+}
+
+
+
+@media screen and (min-width:0px) and (max-width:505px) {
+
+    .singleProductImage {
+        width: 70vw;
+    }
+
+    .content_container {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .singleproductheading {
+
+
+        margin-top: 70px;
+        margin-right: 30px;
+        margin-left: 30px;
+
+
+        font-size: 1.7em;
+
+    }
+
+    .singleProductDetails {
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .singleProductDetails>div {
+        text-align: center;
+    }
+
+    .productReviews {
+        flex-direction: column;
+    }
+
+    .productStatus {
+        display: block;
+    }
+
+    .singleProductDetails {
+        font-size: 12px;
+    }
+
+    .productname_id>p {
+        margin-bottom: 10px;
+    }
+
+    .productAddtoCart {
+        flex-direction: column;
+    }
+
+    .addtocart {
+        margin: auto;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .productdetailbutton,
+    .submitreviewbuttonbox>button,
+    .cancelbutton {
+        font-weight: bold;
+    }
+
+
+    .singleProductRating {
+        color: green !important;
+
+    }
+
+
+
+
+    .submitreviewMain {
+        width: 65vw;
+    }
+
+    .reviewbox {
+        max-width: 55%;
+        min-width: 55%;
+        padding: 10px 10px;
+    }
+
+    .showreview-container>h1 {
+        padding: 0px 12px;
+    }
+
+    .showreview-container {
+        font-size: 12px;
+    }
+
+    .review-box_userName {
+        font-weight: bold;
+
+    }
+
+    .comment {
+        font-weight: bold;
+    }
+
+    /* CartLoaders */
+    .cartLoader {
+        width: 30px;
+        height: 30px;
+        margin-right: 40px;
+        margin-top: 30px;
+
+    }
+
+    .SingleProductDetailLoading {
+        width: 150px;
+        height: 150px;
+    }
+
+}

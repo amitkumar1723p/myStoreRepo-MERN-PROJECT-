@@ -1,0 +1,160 @@
+.getUserMain {
+    display: flex;
+}
+
+.getUserContent {
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.getUserHeadContainer {
+    background: white;
+    position: sticky;
+    padding: 27px 0px 1px 0px;
+    top: 69px;
+}
+
+.getUser_tabelHead {
+    background-color: blue !important;
+    margin-bottom: 10px;
+}
+
+.getUser_tabelHead>p {
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+}
+
+.getUser_tabelFlex {
+    justify-content: space-around;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 100%;
+    align-items: center;
+    background: #00000008;
+    border-radius: 7px;
+
+}
+
+.getUser_tabelFlex>p,
+.getUser_tabelFlex>div {
+    width: 20%;
+    text-align: center;
+    padding: 7px 0;
+    align-items: center;
+
+    margin-right: 10px;
+}
+
+/* .getUser_tabelFlex getUser_tabelFlex2 */
+
+.getUser_tabelFlex>p:first-child {
+    text-align: justify !important;
+}
+
+.getUser_tabelFlex>div:last-child,
+.getUser_tabelFlex>p:last-child {
+    text-align: end !important;
+    margin-right: 0 !important;
+
+}
+
+.getUser_Sno {
+    overflow-wrap: unset !important;
+    width: 5% !important;
+}
+
+.getUser_EamilId,
+.getUser_UserId {
+    width: 50% !important;
+}
+
+.getUser_tabelFlex2>p {
+    overflow-wrap: anywhere;
+}
+
+.getUser_tabelFlex2 {
+    padding-top: 5px;
+    border: 1px solid #00000029;
+    padding-bottom: 5px;
+    margin: 20px 0;
+}
+
+.actionChild {
+    overflow-x: unset !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+.actionChild>.getUserIcon:nth-child(2) {
+
+    margin: 0 5px;
+}
+
+.FindUserheading {
+    margin: auto;
+    width: 62%;
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    margin-bottom: 28px;
+    padding-bottom: 7px;
+}
+
+@media screen and (min-width:0px) and (max-width:1000px) {
+
+    .getUserMain {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: 50vh;
+    }
+
+    .getUserContent {
+        margin: auto !important;
+        width: 100%;
+        font-size: 13px;
+
+    }
+
+    .getUserHeadContainer {
+        top: 70px;
+        padding-top: 53px;
+
+    }
+
+    .getUser_tabelFlex {
+        padding: 0 7px;
+    }
+
+    .getUser_tabelFlex2>p {
+        font-weight: bolder;
+        margin-right: 6px;
+    }
+
+}
+
+
+@media screen and (min-width:0px) and (max-width:600px) {
+    .getUser_tabelFlex {
+        width: 600px;
+
+    }
+
+    .getUserHeadContainer {
+        top: 0;
+    }
+
+    .getUserContent {
+        overflow: auto;
+    }
+}

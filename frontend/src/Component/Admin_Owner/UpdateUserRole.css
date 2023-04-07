@@ -1,0 +1,137 @@
+.UpdateRoleMain {
+    display: flex;
+}
+
+.UpdateRoleContent {
+
+    margin: auto;
+}
+
+.UpdateRoleContainer {
+    padding: 25px 0;
+    border-radius: 8px;
+    width: 50vw;
+    background-color: #efefef;
+    position: relative;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+
+}
+
+.UpdateRoleform>div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.UpdateRoleform>div>input,
+.UpdateRoleform>div>select {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 8px 10px 68px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #526dfa5e;
+    box-sizing: border-box;
+}
+
+.UpdateRoleform>div>label {
+
+    position: absolute;
+    outline: 1px;
+    left: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+.UpdateRoleform>button {
+    background: #0029ffa8;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 1.4em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.UpdateRoleform>button:hover {
+    background: #1d3fe8d5;
+}
+
+.UpdateRoleform>button:active {
+    background: #002aff96;
+}
+
+.UpdateRoleContainer>h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.UpdateRoleform {
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (min-width:0px) and (max-width:1000px) {
+
+    .UpdateRoleContainer {
+        width: 80vw;
+
+    }
+
+    .UpdateRoleform {
+        width: 95%;
+    }
+
+    .UpdateRoleMain {
+        margin-top: auto;
+        margin-bottom: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+@media screen and (min-width:0px) and (max-width:600px) {
+
+
+    .UpdateRoleMain {
+        margin-right: 15px;
+        margin-left: 15px;
+        width: auto;
+    }
+
+    .UpdateRoleContainer {
+        width: 100%;
+        margin-top: 53px;
+        font-size: 13px;
+    }
+
+    .UpdateRoleContent {
+        width: 100%;
+    }
+
+    .UpdateRoleform>div>input,
+    .UpdateRoleform>div>select {
+        padding-left: 37px;
+    }
+
+    .UpdateRoleform>div>label>svg {
+        font-size: 20px;
+    }
+
+    .UpdateRoleform>div>label {
+        left: 7px;
+    }
+}

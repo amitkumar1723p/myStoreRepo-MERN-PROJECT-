@@ -1,0 +1,385 @@
+ .main {
+
+     overflow: hidden;
+     margin-top: auto;
+     margin-bottom: auto;
+ }
+
+
+ .first {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+ }
+
+
+
+ .headingdiv {
+     display: flex;
+     width: 100%;
+     align-items: center;
+     cursor: pointer;
+
+ }
+
+ .loginuser,
+ .emailveryfy {
+     transition: all .50s linear;
+     width: 100%;
+ }
+
+ .formcontainer {
+     width: 200%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: auto;
+     overflow: hidden;
+ }
+
+ .secondmain {
+     overflow: hidden;
+     width: 90%;
+     margin: auto;
+
+ }
+
+ .loginAndSignupContainer,
+ .otpverifycontainer,
+ .insertuserdetailsContainer {
+     padding: 25px 0;
+     border-radius: 8px;
+     width: 50vw;
+     background-color: #efefef;
+     position: relative;
+     margin: auto;
+     transition: all .50s linear;
+     flex-shrink: 0;
+
+ }
+
+
+
+
+ .hrline {
+     width: 50%;
+     height: 2px;
+     background-color: red;
+     margin-bottom: 30px;
+     margin-top: 17px;
+     border-radius: 86px;
+     transition: all .50s linear;
+ }
+
+
+ .headingdiv p {
+     font-weight: bold;
+     width: 50%;
+     text-align: center;
+     box-sizing: border-box;
+     padding: 7px 0;
+     font-size: 1.4em;
+ }
+
+ .loginuser>div,
+ .emailveryfy>div,
+ .otpverify>div,
+ .insertdetailform>div {
+     display: flex;
+     align-items: center;
+     position: relative;
+     width: 100%;
+     margin: 20px 0;
+ }
+
+ .loginuser>div>input,
+ .emailveryfy>div>input,
+ .otpverify>div>input,
+ .insertdetailform>div>input {
+     width: 100%;
+     font-size: 1.2em;
+     padding: 10px 8px 10px 68px;
+     outline: none;
+     border-radius: 6px;
+     border: 1px solid #526dfa5e;
+
+ }
+
+ .icon {
+     position: absolute;
+     outline: 1px;
+     /* font-size: 1.8em; */
+     left: 16px;
+     box-sizing: border-box;
+     cursor: pointer;
+
+ }
+
+ .forgetemail-password {
+     box-sizing: border-box;
+     width: 100%;
+     justify-content: space-between;
+     padding: 9px 0;
+     font-size: 1.1em;
+ }
+
+ .forgetemail-password>a {
+     text-decoration: none;
+     color: black;
+
+     cursor: pointer;
+ }
+
+ .loginuser>button,
+ .emailveryfy>button,
+ .otpverify>button,
+ .insertdetailform>button {
+     background: #0029ffa8;
+     padding: 10px 0;
+     border-radius: 7px;
+     font-size: 1.4em;
+     color: white;
+     cursor: pointer;
+     border: none;
+     transition: all .3s linear;
+     box-sizing: border-box;
+     width: 100%;
+ }
+
+ .loginuser>button:hover,
+ .emailveryfy>button:hover,
+ .insertdetailform>button:hover {
+     background: #1d3fe8d5;
+ }
+
+ .loginuser>button:active,
+ .emailveryfy>button:active,
+ .insertdetailform>button:active {
+     background: #002aff96;
+
+ }
+
+
+
+
+
+ .otpverify,
+ .insertdetailform {
+     width: 80%;
+     margin: auto;
+ }
+
+
+
+ /* Chrome, Safari, Edge, Opera */
+
+
+ .insertuserdetailsContainer input::-webkit-outer-spin-button,
+ .insertuserdetailsContainer input::-webkit-inner-spin-button,
+ .otpverify input::-webkit-outer-spin-button,
+ .otpverify input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+
+ /* Firefox */
+ .insertuserdetailsContainer input[type=number],
+ .otpverify input[type=number] {
+     --moz-appearance: none;
+ }
+
+
+
+
+
+
+ .insertuserdetailsContainer input[type=file]::file-selector-button {
+     display: none;
+ }
+
+ .insertuserdetailsContainer input[type=file]::-webkit-file-upload-button {
+     display: none;
+ }
+
+
+
+ .resendotp {
+     text-align: end;
+     font-size: 1.3em;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+ .otptext {
+
+     width: 100%;
+     align-items: center;
+     justify-content: space-between;
+     display: flex;
+     flex-direction: row-reverse;
+ }
+
+ .otptime {
+
+     font-size: .9em;
+ }
+
+ /* Insert User Details  */
+
+
+
+ .insertuserdetailsContainer>h2 {
+     font-size: 2em;
+     margin-bottom: 30px;
+     text-align: center;
+ }
+
+ .insertuserdetailsContainer input[type=file] {
+     cursor: pointer;
+     background: white;
+ }
+
+ .show-hidepassword {
+     position: absolute;
+     right: 10px;
+     cursor: pointer;
+ }
+
+ #insertpassword,
+ #loginpassword {
+     padding-right: 40px;
+
+ }
+
+ /* Loding Css  */
+
+ .emailverifyloding {
+     width: 150px;
+     height: 150px;
+ }
+
+ .otpverifyloading {
+     width: 150px;
+     height: 150px;
+     position: relative;
+
+
+ }
+
+ .imageicon {
+     width: 100% !important;
+     height: 100% !important;
+ }
+
+ #imageiconlabel {
+     height: 85%;
+     max-width: 50px;
+     left: 6px;
+     border-radius: 100%;
+ }
+
+ #imageiconlabel>img {
+     width: 100%;
+     height: 100%;
+     border-radius: 100%;
+ }
+
+ @media screen and (min-width:0px) and (max-width:1000px) {
+
+
+     .loginAndSignupContainer,
+     .otpverifycontainer,
+     .insertuserdetailsContainer {
+         width: 80vw;
+     }
+
+     .secondmain,
+     .otpverify,
+     .insertdetailform {
+         width: 93%;
+         width: 95%;
+         margin: auto;
+     }
+
+     .main {
+         padding-top: 35px;
+     }
+
+     /* .otpverify,
+     .insertdetailform {} */
+
+ }
+
+
+
+ @media screen and (min-width:0px) and (max-width:600px) {
+     .main {
+         font-size: 13px;
+         box-sizing: border-box;
+         width: 100%;
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+
+     .resendotp {
+         margin-left: 4px;
+         text-align: center;
+     }
+
+     .secondmain,
+     .otpverify,
+     .insertdetailform {
+         width: 95%;
+     }
+
+     .icon>svg,
+     .show-hidepassword>svg {
+         font-size: 20px;
+     }
+
+     .loginAndSignupContainer,
+     .otpverifycontainer,
+     .insertuserdetailsContainer {
+         width: 100%;
+         box-sizing: border-box;
+     }
+
+
+     .loginuser>div>input,
+     .emailveryfy>div>input,
+     .otpverify>div>input,
+     .insertdetailform>div>input {
+         padding-left: 35px;
+         font-size: 1.1em;
+     }
+
+     .insertuserdetailsContainer input[type=file] {
+         padding-left: 50px;
+     }
+
+     .forgetemail-password>a {
+         font-weight: bolder;
+     }
+
+     .icon {
+         left: 6px;
+     }
+
+     #insertpassword,
+     #loginpassword {
+         padding-right: 33px;
+     }
+
+     .emailverifyloding {
+         width: 100px;
+         height: 100px;
+     }
+
+     .otpverifyloading {
+         width: 100px;
+         height: 100px;
+
+
+     }
+ }

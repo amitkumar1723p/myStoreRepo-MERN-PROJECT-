@@ -1,0 +1,280 @@
+.confrimOrderMain {
+    margin: 10px 105px auto auto;
+    width: 85vw;
+}
+
+
+
+.notShippingAddreshIcon {
+    font-size: 4em !important;
+    color: red;
+}
+
+.notShippingAddresh>h2 {
+    margin-top: 20px;
+    font-size: 2.4em;
+}
+
+.notShippingAddresh {
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.first_second-SectionContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    align-items: center;
+    overflow-wrap: anywhere;
+
+}
+
+.firstSection {
+    border-right: 1px solid black;
+    width: 65%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+
+.confrimorder_cartItemsFlex {
+    align-items: center;
+    display: flex;
+    margin: 20px 0px;
+    background: #b4b4b40d;
+    padding: 4px 4px;
+    border-radius: 5px;
+    border: 1px solid #00000024;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.confrimorder_cartItemsFlex_First-Child {
+    margin-right: auto;
+    margin-bottom: 6px;
+}
+
+.confrimorder_cartDetails>div:first-child {
+    margin-top: 0px;
+}
+
+.confrimorder_cartDetails>div:last-child {
+    margin-bottom: 0px;
+}
+
+.confrimorder_cartItemsFlex>div img {
+    width: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+.confrimorder_cartItemsFlex>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    /* margin: auto; */
+}
+
+.confrimorder_shippingInfoContainer>h1,
+.confrimorder_cartItems>h1,
+.secondSection>h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+
+}
+
+.confrimorder_shippingInfoContainer {
+    margin-bottom: 20px;
+}
+
+.confrimorder_shippingInfoContainer>p {
+    color: #3f3f3f;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.calPrice>div {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.calPrice {
+    margin-bottom: 15px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 15px;
+}
+
+.caltotalPrice {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+
+}
+
+.secondSection {
+    margin-left: 20px;
+    width: 35%;
+
+}
+
+.confrimorder_cartDetails {
+    padding-right: 5px;
+    overflow: auto;
+    max-height: 40vh
+}
+
+.secondSection>button {
+
+    background: #0029ffa8;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 1.4em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 30px;
+
+
+}
+
+.secondSection>button:hover {
+    background: #1d3fe8d5;
+}
+
+.secondSection>button:active {
+    background: #002aff96;
+}
+
+
+
+@media screen and (min-width:0px) and (max-width:1000px) {
+    .first_second-SectionContainer {
+        flex-direction: column;
+
+    }
+
+    .confrimOrderMain {
+        margin: 10px 105px auto 15px;
+    }
+
+    .firstSection {
+        width: 100%;
+        border: none;
+        padding-right: 0;
+
+    }
+
+    .secondSection {
+        width: 100%;
+        margin: 20px auto auto auto;
+
+    }
+
+    .checkoutStep {
+        width: 92%;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .secondSection>button {
+        width: 300px;
+        margin-right: auto;
+        display: block;
+        background: #1d3fe8d5;
+        margin-left: auto;
+
+    }
+
+
+
+}
+
+
+
+
+@media screen and (min-width:0px) and (max-width:505px) {
+    .confrimOrderMain {
+        margin: auto;
+        width: 99%;
+        margin-top: 15px;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    .checkoutStep {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .checkoutStep>div>p,
+    .paymenticon>span {
+        margin-right: 0;
+    }
+
+    .shippingicon,
+    .confrimordericon,
+    .paymenticon {
+        width: auto;
+    }
+
+    .secondSection>button {
+        width: 98%;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    .confrimorder_cartItemsFlex_First-Child {
+        flex-direction: column;
+    }
+
+
+    .first_second-SectionContainer {
+        font-size: 13px;
+    }
+
+    .confrimorder_cartItemsFlex>div img {
+        width: 60px;
+    }
+
+
+
+    .confrimorder_cartItemsFlex {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 10px;
+
+
+    }
+
+    .confrimorder_cartItemsFlex>div {
+        width: 100%;
+        overflow-wrap: anywhere;
+
+    }
+
+    .confrimorder_cartItemsFlex_First-Child {
+        margin-bottom: 0;
+    }
+}

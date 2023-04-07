@@ -1,0 +1,165 @@
+.Order_tabel {
+    width: 85vw;
+    margin: 0px 108px 25px auto;
+}
+
+.Order_tabelHead {
+    background-color: blue !important;
+    margin-bottom: 10px;
+}
+
+.Order_tabelHead>p {
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+}
+
+.orderHeadContainer {
+    background: white;
+
+    position: sticky;
+    padding: 27px 0px 1px 0px;
+    top: 69px;
+}
+
+.Order_tabelflex {
+    justify-content: space-around;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 100%;
+    align-items: center;
+    background: #00000008;
+    border-radius: 7px;
+}
+
+.Order_tabelflex>p {
+    width: 20%;
+    text-align: center;
+    padding: 7px 0;
+    align-items: center;
+
+    margin-right: 10px;
+
+
+}
+
+
+
+.Order_tabelFlex2 {
+    padding-top: 5px;
+    border: 1px solid #00000029;
+    padding-bottom: 5px;
+    margin: 20px 0;
+
+}
+
+.Order_tabelFlex2>p {
+    overflow-wrap: anywhere;
+}
+
+.Order_tabelflex>p:first-child {
+    text-align: justify !important;
+
+}
+
+.OrderId {
+    width: 40% !important;
+
+}
+
+
+
+.Order_tabelflex>p:last-child {
+    text-align: end !important;
+    margin-right: 0 !important;
+
+}
+
+.RocketIcon {
+    color: green;
+    cursor: pointer;
+    transition: all .2s linear;
+
+}
+
+.RocketIcon:hover {
+    color: red;
+}
+
+.RocketIcon:active {
+    color: green;
+}
+
+.Confrimorder_ProductId {
+    font-size: .8em;
+}
+
+.SNOheading,
+.SNOChildren {
+
+    overflow-wrap: unset !important;
+    width: 5% !important;
+}
+
+
+@media screen and (min-width:0px) and (max-width:1000px) {
+
+    .Order_tabel {
+        width: auto !important;
+        font-size: 13px;
+        margin: 0px 79px 25px 12px;
+        font-weight: bold;
+    }
+
+    .Order_tabelflex {
+        padding: 0 7px;
+    }
+
+    .Order_tabelFlex2>p {
+
+        margin-right: 5px;
+        overflow-wrap: anywhere;
+    }
+
+    .Order_tabelflex>p:last-child {
+        width: 79px;
+    }
+
+    /* * {
+        outline: 1px solid red;
+    } */
+
+
+
+
+
+}
+
+
+@media screen and (min-width:0px) and (max-width:600px) {
+
+    .Order_tabel {
+        margin: 0px 12px 25px 12px;
+        overflow: auto
+    }
+
+    .orderHeadContainer {
+        padding-top: 70px;
+    }
+
+    .Order_tabelflex,
+    .orderHeadContainer {
+        outline: 1px solid rgb(229, 255, 0);
+        min-width: 600px;
+        top: 0;
+    }
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,168 @@
+  .UpdateProfileContainer {
+      padding: 25px 0;
+      border-radius: 8px;
+      width: 50vw;
+      background-color: #efefef;
+      position: relative;
+      margin: auto;
+      transition: all .50s linear
+  }
+
+  .UpdateProfileForm>div {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      margin: 20px 0;
+  }
+
+  .UpdateProfileForm>div>input {
+      width: 100%;
+      font-size: 1.2em;
+      padding: 10px 8px 10px 68px;
+      outline: none;
+      border-radius: 6px;
+      border: 1px solid #526dfa5e;
+
+  }
+
+  .UpdateProfileForm>div>label {
+
+      position: absolute;
+      outline: 1px;
+      left: 16px;
+      box-sizing: border-box;
+      cursor: pointer;
+  }
+
+
+  .UpdateProfileForm>button {
+      background: #0029ffa8;
+      padding: 10px 0;
+      border-radius: 7px;
+      font-size: 1.4em;
+      color: white;
+      cursor: pointer;
+      border: none;
+      transition: all .3s linear;
+      box-sizing: border-box;
+      width: 100%;
+  }
+
+  .UpdateProfileForm>button:hover {
+      background: #1d3fe8d5;
+  }
+
+
+  .UpdateProfileForm>button:active {
+      background: #002aff96;
+      ;
+  }
+
+  .UpdateProfileContainer>h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      text-align: center;
+  }
+
+  .UpdateProfileForm {
+      width: 80%;
+      margin: auto;
+  }
+
+
+
+  #UpdateProfileimagelabel {
+      height: 85%;
+      left: 6px;
+      max-width: 50px;
+      border-radius: 100%;
+  }
+
+  #UpdateProfileimagelabel>img {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+  }
+
+  .UpdateProfileForm input[type=file] {
+      cursor: pointer;
+      background: white;
+  }
+
+
+  .UpdateProfileForm input::-webkit-outer-spin-button,
+  .UpdateProfileForm input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  /* Firefox */
+
+  .UpdateProfileForm input[type=number] {
+      --moz-appearance: none;
+  }
+
+
+  .UpdateProfileForm input[type=file]::file-selector-button {
+      display: none;
+  }
+
+  .UpdateProfileForm input[type=file]::-webkit-file-upload-button {
+      display: none;
+  }
+
+  .updateprofileloading {
+      width: 150px;
+      height: 150px;
+  }
+
+
+  @media screen and (min-width:0px) and (max-width:1000px) {
+      .UpdateProfileContainer {
+          width: 80vw;
+      }
+
+      .UpdateProfileForm {
+          width: 90%;
+      }
+  }
+
+  @media screen and (min-width:0px) and (max-width:600px) {
+      .UpdateProfileContainer {
+          font-size: 14px;
+          margin-bottom: 30px;
+          margin-top: 80px;
+          width: auto;
+          margin-left: 10px;
+          margin-right: 10px;
+          box-sizing: border-box;
+
+      }
+
+      .UpdateProfileForm {
+          width: 95%;
+      }
+
+      .UpdateProfileForm>div>input {
+          padding-left: 33px;
+      }
+
+      .UpdateProfileForm>div>label {
+          left: 5px;
+      }
+
+      .UpdateProfileForm input[type=file] {
+          padding-left: 40px;
+      }
+
+      .UpdateProfileForm>div>label>svg {
+          font-size: 20px;
+      }
+
+      .updateprofileloading {
+          width: 100px;
+          height: 100px;
+      }
+
+  }

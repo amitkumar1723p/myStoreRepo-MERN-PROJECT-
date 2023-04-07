@@ -1,0 +1,65 @@
+.alert {
+    display: flex;
+    padding-left: 5px;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.alearttype {
+    font-size: 2em;
+    display: flex;
+    font-weight: bold;
+}
+
+.alearttype>span {
+    margin: 0 1px 0px 5px;
+}
+
+.alertmessage {
+    color: blue;
+    font-size: 1.5em;
+    margin-left: 10px;
+    overflow-wrap: anywhere;
+
+}
+
+.alert-container {
+    margin-left: 6px;
+    margin-right: 6px;
+    display: inline-block;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    /* margin-top: 10px; */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 1s linear;
+    animation-name: alertbox;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+.errorboxclose {
+    background-color: white;
+    padding: 5px;
+    border-radius: 100%;
+    font-size: 1.5em;
+    position: relative;
+    left: 8px;
+    cursor: pointer;
+
+}
+
+@keyframes alertbox {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 75px;
+    }
+}

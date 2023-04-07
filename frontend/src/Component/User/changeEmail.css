@@ -1,0 +1,213 @@
+.EmailChangeMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.EmailChangeContainer,
+.changeEmailotpverifyContainer {
+    padding: 25px 0;
+    border-radius: 8px;
+    width: 50vw;
+    background-color: #efefef;
+    position: relative;
+    margin: auto;
+    transition: all .50s linear;
+
+    flex-shrink: 0;
+
+}
+
+
+
+.changeEmailForm>div,
+.changeEmailotpverify>div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+
+
+.changeEmailForm>div>input,
+.changeEmailotpverify>div>input {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 8px 10px 68px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #526dfa5e;
+
+}
+
+.changeEmailForm>div>label,
+.changeEmailotpverify>div>label {
+    position: absolute;
+    outline: 1px;
+    left: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+
+
+
+.changeEmailheading {
+    text-align: center;
+    font-size: 1.6em;
+}
+
+
+.changeEmailForm,
+.changeEmailotpverify {
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.changeEmailotptext {
+
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+
+.changeEmailresendotp {
+    text-align: end;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.changeEmailotptime {
+    font-size: .9em;
+}
+
+
+
+
+
+.changeEmailForm>button,
+.changeEmailotpverify>button {
+    background: #0029ffa8;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 1.4em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+
+
+
+
+.changeEmailForm>button:hover,
+.changeEmailotpverify>button:hover {
+    background: #1d3fe8d5;
+}
+
+
+
+.changeEmailForm>button:active,
+.changeEmailotpverify>button:active {
+    background: #002aff96;
+
+}
+
+
+
+
+
+.changeEmailotpverifyContainer input::-webkit-inner-spin-button,
+.changeEmailotpverifyContainer input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.changeEmailotpverifyContainer input[type=number] {
+    --moz-appearance: none;
+}
+
+@media screen and (min-width:0px) and (max-width: 1000px) {
+    .changepasswordform>div>input::placeholder {
+        font-size: .8em;
+
+    }
+
+    .EmailChangeContainer,
+    .changeEmailotpverifyContainer {
+        width: 80vw;
+    }
+
+    .changeEmailForm,
+    .changeEmailotpverify {
+        width: 90%;
+    }
+
+
+}
+
+@media screen and (min-width:0px) and (max-width:600px) {
+
+
+    .EmailChangeMainContainer {
+        font-size: 14px;
+        margin-bottom: 30px;
+        margin-top: 80px;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        box-sizing: border-box;
+    }
+
+    .changeEmailForm,
+    .changeEmailotpverify {
+        width: 95%;
+    }
+
+    .EmailChangeContainer,
+    .changeEmailotpverifyContainer {
+        width: 100%;
+    }
+
+    .changeEmailForm>div>label>svg,
+    .changeEmailotpverify>div>label>svg {
+        font-size: 20px;
+    }
+
+    .changeEmailForm>div>label,
+    .changeEmailotpverify>div>label {
+        left: 5px;
+    }
+
+
+    .changeEmailForm>div>input,
+    .changeEmailotpverify>div>input {
+        padding-left: 35px;
+    }
+
+    .changeEmailresendotp {
+        margin-left: 8px;
+    }
+}

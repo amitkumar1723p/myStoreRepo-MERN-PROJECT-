@@ -1,0 +1,248 @@
+.navbar {
+    width: 95vw;
+    background-color: #000c56;
+    box-sizing: border-box;
+    padding: 20px 0px;
+    margin: auto;
+    color: white;
+}
+
+
+header {
+    z-index: 10;
+    background-color: #000c56;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.searchbox {
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    display: flex;
+
+}
+
+
+
+
+
+
+.searchoption {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    width: 100%;
+
+}
+
+.productnamelist {
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    border-radius: 6px;
+    top: 31px;
+    max-height: 350px;
+    overflow: auto;
+    color: black;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1px 0px black;
+    background-color: #f5f4f3;
+}
+
+.productnamelist p {
+    font-size: 1.3em;
+}
+
+.productnamelist p {
+    font-size: 1.3em;
+    padding: 6px 0;
+    transition: all .4s;
+    cursor: pointer
+}
+
+.productnamelist p:hover {
+    margin: 0 5px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border-radius: 9px;
+}
+
+
+.navbar ul>a {
+    color: white;
+    margin-left: 40px;
+}
+
+.navbar ul>a:first-child {
+    margin-left: 0;
+}
+
+
+.tag {
+    font-size: 1.4em;
+}
+
+.navbar ul {
+    font-size: 1.2em;
+}
+
+.searchbox input {
+    padding: 3px 0px 3px 8px;
+    font-size: 1.2em;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.searchbox button {
+    font-size: 1.08em;
+    padding: 4px 11px;
+    border-radius: 5px;
+    margin-left: 13px;
+    /* color: #591e18; */
+    background: #0c94fa;
+    border: 2px solid #0c94fa;
+    font-weight: bold;
+    color: black;
+
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+
+
+.searchbox button:hover {
+    background-color: rgba(0, 59, 115, 0.353);
+    color: white;
+    border: 2px solid white;
+    font-weight: 400;
+}
+
+.searchbox button:active {
+    color: black;
+    background: #0c94fa;
+
+}
+
+@media screen and (min-width:0px) and (max-width:600px) {
+    header {
+        height: 150px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .searchbox {
+        width: 70%;
+        margin: auto;
+        margin-top: 15px;
+        flex-direction: column;
+    }
+
+    .searchbox button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .iconContainer {
+        top: 160px !important;
+    }
+
+    .objectimg {
+        width: 36px !important;
+        max-height: 60px !important;
+    }
+
+    .iconandname {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .iconbox {
+        margin-top: 10px !important;
+        /* outline: 3px solid blue; */
+    }
+
+
+    .iconName {
+        right: 30px !important;
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+    }
+
+
+    .alert-container {
+
+        font-size: 11px;
+        animation-name: alertbox2 !important;
+
+        /* .alert-container  */
+        margin-right: 5px !important;
+        margin-left: 5px;
+    }
+
+    /* .maindiv {
+        min-height: calc(100vh - 153px - 127px) !important;
+    } */
+
+
+    .IderrorBox {
+        font-size: 10px;
+
+    }
+
+    .IderrorBox>button {
+        font-weight: bold;
+    }
+
+    .goBack {
+        font-weight: bold;
+        font-size: 10px !important;
+        top: 160px !important;
+        padding: 7px 9px !important;
+        right: 15px !important;
+    }
+
+    .notShippingAddresh {
+        font-size: 12px;
+    }
+
+
+
+
+    @keyframes alertbox2 {
+        0% {
+            top: 0px;
+        }
+
+        100% {
+            top: 155px;
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width:0px) and (max-width:330px) {
+
+
+
+    .searchbox input::placeholder {
+        font-size: .9em;
+        font-weight: bold;
+    }
+
+    .searchbox {
+        width: 90%;
+    }
+}

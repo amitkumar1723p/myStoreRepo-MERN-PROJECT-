@@ -1,0 +1,161 @@
+.shippingMain {
+    margin: 10px 105px auto auto;
+    width: 85vw;
+}
+
+.ShipingdetailsContainer {
+    padding: 25px 0;
+    border-radius: 8px;
+    width: 55%;
+    background-color: #efefef;
+    position: relative;
+    margin: 40px auto;
+    transition: all .50s linear;
+}
+
+.Shipingdetailform>div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.Shipingdetailform>div>input,
+.Shipingdetailform>div>select {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 8px 10px 68px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #526dfa5e;
+}
+
+.Shipingdetailform>div>select>option {
+    font-size: .8em;
+}
+
+
+
+.Shipingdetailform>div>label {
+    position: absolute;
+    outline: 1px;
+    left: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+.Shipingdetailform {
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.ShipingdetailsContainer>h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.Shipingdetailform>button {
+    background: #0029ffa8;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 1.4em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.Shipingdetailform>button:hover {
+    background: #1d3fe8d5;
+}
+
+.Shipingdetailform>button:active {
+    background: #002aff96;
+}
+
+
+
+
+
+
+
+
+.Shipingdetailform input::-webkit-outer-spin-button,
+.Shipingdetailform input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+
+.Shipingdetailform input[type=number] {
+    --moz-appearance: none;
+}
+
+
+
+@media screen and (min-width:0px) and (max-width:1000px) {
+    .shippingMain {
+        margin: 10px 105px auto 15px;
+        width: 85vw;
+    }
+
+    .Shipingdetailform>div>label {
+        left: 8px;
+    }
+
+    .Shipingdetailform>div>input,
+    .Shipingdetailform>div>select {
+
+        padding-left: 40px;
+    }
+
+    .ShipingdetailsContainer {
+        width: 85%;
+    }
+
+    .Shipingdetailform {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:505px) {
+
+    .shippingMain {
+        width: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .ShipingdetailsContainer>h2 {
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+
+    .ShipingdetailsContainer {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .Shipingdetailform>div>label>svg {
+        font-size: 20px;
+    }
+
+    .Shipingdetailform>div>label {
+        left: 5px;
+    }
+
+    .Shipingdetailform>div>input,
+    .Shipingdetailform>div>select {
+
+        padding-left: 33px;
+    }
+
+}

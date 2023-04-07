@@ -1,0 +1,95 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        /* overflow-wrap: anywhere; */
+    }
+
+    .maindiv {
+        /* min-height: calc(100vh - 77px - 123px); */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .protectedloader {
+        width: 200px;
+        height: 200px;
+    }
+
+    .smaillLoading {
+        width: 22px;
+        height: 22px;
+        border-left: 2px solid blue !important;
+        margin-right: 0 !important;
+        z-index: -1;
+    }
+
+    .goBack {
+        padding: 9px 14px;
+        background: rgb(0, 187, 255);
+        border: navajowhite;
+        outline: none;
+        border-radius: 31px;
+        cursor: pointer;
+        color: blue;
+        right: 25px;
+        font-size: 1em;
+        position: fixed;
+        top: 97px;
+
+    }
+
+    .goBack:active {
+        background-color: rgba(0, 187, 255, 0.225);
+        color: rgb(90, 0, 154);
+    }
+
+    .IderrorBox {
+        text-align: center;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .IderrorBox>button {
+        padding: 9px 14px;
+        background: rgb(90 0 154 / 41%);
+        color: blue;
+        border: navajowhite;
+
+        outline: none;
+        border-radius: 31px;
+        cursor: pointer;
+
+        margin-top: 15px;
+        font-size: 1em;
+
+
+    }
+
+    .IderrorBox>h1 {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 2em;
+        overflow-wrap: anywhere;
+
+    }
+
+    .IderrorBox>button:active {
+        color: rgb(90, 0, 154);
+        background-color: rgba(40, 77, 91, 0.449);
+
+
+    }
+
+    @media screen and (min-width:0px) and (max-width:400px) {
+        .protectedloader {
+            width: 100px;
+            height: 100px;
+        }
+    }

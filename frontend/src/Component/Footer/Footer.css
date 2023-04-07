@@ -1,0 +1,31 @@
+.footer {
+    background-color: #000c56;
+    /* width: 99vw; */
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px 10px 20px 10px;
+    box-sizing: border-box;
+
+
+}
+
+
+
+
+.footer div {
+    font-size: 2em;
+    color: red;
+}
+
+
+footer p:nth-child(2) {
+    color: white;
+    margin: 8px 0;
+}
+
+footer p {
+    color: white;
+    font-size: 1.1em;
+
+}

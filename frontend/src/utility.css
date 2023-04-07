@@ -1,0 +1,200 @@
+  /* FLEX BOX  */
+
+
+  * {
+      margin: 0;
+      padding: 0;
+  }
+
+  /* define text color  */
+
+  .clr_white {
+      color: white;
+  }
+
+  .clr_red {
+      color: red;
+  }
+
+  .flex {
+      display: flex;
+  }
+
+  .justify-end {
+      justify-content: flex-end
+  }
+
+  .justify-center {
+      justify-content: center;
+  }
+
+  .aling-center {
+      align-items: center;
+  }
+
+  .flex-colounm {
+      flex-direction: column;
+  }
+
+  .justify-between {
+      justify-content: space-between;
+
+  }
+
+  /* Flex Children Properties  */
+  .alig-self_F-end {
+      align-self: flex-end;
+
+  }
+
+
+
+  /* End flex box */
+
+
+  /* start width peroperty  */
+
+
+  .width_48per {
+      width: 48%;
+  }
+
+
+  .width_90vw {
+      width: 90vw;
+  }
+
+  .width_92per {
+      width: 92%;
+
+
+  }
+
+  .width_100per {
+      width: 100%;
+  }
+
+  /* End width peroperty  */
+
+  /* text-peroperty  */
+
+  .text-end {
+      text-align: end;
+  }
+
+  .text-center {
+      text-align: center;
+  }
+
+  .text-justify {
+      text-align: justify;
+  }
+
+  .underline_none {
+      text-decoration: none;
+
+  }
+
+  /* End text peroperty  */
+
+  /* Margin peroperty  */
+ 
+   .allmargin_auto{
+    margin: auto;
+   }
+
+  .margin-right {
+      margin-right: 20px;
+  }
+
+
+  .margin_L_R-auto {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .margin_L-auto {
+      margin-left: auto;
+  }
+
+  .margin_R-auto {
+      margin-right: auto;
+  }
+
+  .margin_T-auto {
+      margin-top: auto;
+  }
+
+  .margin_B-auto {
+      margin-bottom: auto;
+  }
+
+
+  /* End margin peroperty  */
+
+  /* rough use background  */
+
+  .bg {
+      background-color: blue;
+  }
+
+  .bg1 {
+      background-color: green;
+  }
+
+  /* End rough use background  */
+
+  /* li peroperty  */
+  .li_style_none {
+      list-style: none;
+  }
+
+  /* End li peroperty  */
+
+
+  /* Button peroperty  */
+  .btn {
+      margin-top: 5px;
+      cursor: pointer;
+      font-weight: bolder;
+      padding: 5px 9px;
+      font-size: 1.1em;
+      border-radius: 5px;
+      background: #0076ff;
+      color: white;
+      border: none;
+      outline: none;
+      box-shadow: 2px 2px 0px red;
+      margin-right: 10px;
+
+  }
+
+  .btn:active {
+      box-shadow: -2px -2px 0px red;
+      ;
+  }
+
+
+
+  /* End button peroperty  */
+
+
+  /* Cursor Peroperty  */
+
+  .cursor_pointer {
+      cursor: pointer;
+  }
+
+  /* End Cursor Peroperty  */
+
+
+
+
+  /* Positon Peroperty  */
+  .position_fiexd {
+      position: fixed;
+      top: 20px;
+      left: 0;
+  }
+
+  /* End Position Peroperty  */

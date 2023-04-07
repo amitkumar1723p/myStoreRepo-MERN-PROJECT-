@@ -1,0 +1,51 @@
+ .checkoutStep {
+     justify-content: space-between;
+     display: flex;
+     align-items: center;
+     width: 100%;
+ }
+
+ .shippingicon,
+ .confrimordericon {
+     display: flex;
+     align-items: center;
+     width: 100%;
+ }
+
+ .checkoutStep>div>p,
+ .paymenticon>span {
+     border-radius: 4px;
+     background-color: #100c0c8c;
+     width: 100%;
+     margin: 0px 7px;
+     padding: 2px 11px;
+     box-sizing: border-box;
+     color: white;
+
+ }
+
+ .paymenticon>span {
+     margin-right: 0;
+ }
+
+ .checkoutIcon {
+     font-size: 2.2em !important;
+ }
+
+ .paymenticon {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ /* {
+
+     border-radius: 4px;
+     background-color: #100c0c8c;
+     width: 100%;
+     margin: 0px 7px;
+     padding: 2px 11px;
+     box-sizing: border-box;
+     color: white;
+ } */
