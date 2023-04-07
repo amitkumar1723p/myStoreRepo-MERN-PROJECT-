@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import loginicon from "../../src/images/loginicon.png";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -22,7 +22,7 @@ export default function Icons() {
   const { userdata } = useSelector((state) => {
     return state.meDetails;
   });
-
+  const IconContainer = useRef(null);
   const { userlogoutdata } = useSelector((state) => {
     return state.LogoutUser;
   });
@@ -36,6 +36,23 @@ export default function Icons() {
   const [imgeUrl, setImgaUrl] = useState(loginicon);
   const [iconArr, setIconArr] = useState([]);
   const [Isicon, setIsIcon] = useState(true);
+
+  if (iconshow == true) {
+    document.addEventListener("click", (e) => {
+      if (IconContainer.current) {
+        let hideelement = IconContainer.current.contains(e.target);
+        let alertContainer = document.querySelector(".alert-container");
+
+        if (alertContainer) {
+          hideelement = alertContainer.contains(e.target);
+        }
+
+        if (hideelement === false) {
+          setIconShow(false);
+        }
+      }
+    });
+  }
 
   let Iconfunction = (iconName, navigatepath) => {
     if (iconName == "Logout") {
@@ -158,64 +175,63 @@ export default function Icons() {
 
   return (
     <>
-      
-        <div
-          className="iconContainer"
-          onMouseOver={() => {
-            setIconShow(true);
+      <div
+        ref={IconContainer}
+        className="iconContainer"
+        onMouseOver={() => {
+          setIconShow(true);
 
-            //  document.body.style.backgroundColor="#00000052"
-          }}
-          onMouseOut={() => {
-            setIconShow(false);
-            // document.body.style.background="white"
-          }}
-        >
-          <object data={imgeUrl} className="objectimg">
-            <img src={loginicon} alt="" />
-          </object>
+          //  document.body.style.backgroundColor="#00000052"
+        }}
+        onMouseOut={() => {
+          setIconShow(false);
+          // document.body.style.background="white"
+        }}
+      >
+        <object data={imgeUrl} className="objectimg">
+          <img src={loginicon} alt="" />
+        </object>
 
-          {iconArr.map(({ Icon, IconName, navigatepath }, index) => {
-            return (
-              <div className="iconandname" key={index}>
-                {iconshow == true && location.pathname !== navigatepath && (
-                  <>
-                    <div
-                      className="iconbox"
-                      onMouseEnter={(e) => {
-                        let nextElement =
-                          e.target.parentElement.nextElementSibling;
-                        if (nextElement) {
-                          nextElement.style.display = "block";
-                        }
+        {iconArr.map(({ Icon, IconName, navigatepath }, index) => {
+          return (
+            <div className="iconandname" key={index}>
+              {iconshow == true && location.pathname !== navigatepath && (
+                <>
+                  <div
+                    className="iconbox"
+                    onMouseEnter={(e) => {
+                      let nextElement =
+                        e.target.parentElement.nextElementSibling;
+                      if (nextElement) {
+                        nextElement.style.display = "block";
+                      }
 
-                        //   Grap the Privious Element
-                      }}
-                      onMouseLeave={(e) => {
-                        let nextElement =
-                          e.target.parentElement.nextElementSibling;
+                      //   Grap the Privious Element
+                    }}
+                    onMouseLeave={(e) => {
+                      let nextElement =
+                        e.target.parentElement.nextElementSibling;
 
-                        if (nextElement) {
-                          nextElement.style.display = "none";
-                        }
-                      }}
-                      onClick={(e) => {
-                        Iconfunction(IconName, navigatepath);
-                      }}
-                    >
-                      <Icon className="originalicon" />
-                    </div>
+                      if (nextElement) {
+                        nextElement.style.display = "none";
+                      }
+                    }}
+                    onClick={(e) => {
+                      Iconfunction(IconName, navigatepath);
+                    }}
+                  >
+                    <Icon className="originalicon" />
+                  </div>
 
-                    <div className="iconName" style={{ display: "none" }}>
-                      {IconName}
-                    </div>
-                  </>
-                )}
-              </div>
-            );
-          })}
-        </div>
-     
+                  <div className="iconName" style={{ display: "none" }}>
+                    {IconName}
+                  </div>
+                </>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }

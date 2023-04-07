@@ -138,7 +138,7 @@ export default function LoginAndSingup() {
 
           setTimeout(() => {
             navigate("/profile");
-          }, 1000);
+          }, 2000);
         }
 
         if (data.login === true) {
