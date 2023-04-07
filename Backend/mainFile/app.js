@@ -1,5 +1,5 @@
 import express from "express";
-import dotenv from "dotenv";
+
 import { join, resolve } from "path";
 import connectDb from "../DatabaseConnection/connectdb.js";
 import UserRouter from "../Routes/UserRoutes.js";
@@ -7,13 +7,16 @@ import AdminAndDbOwnerRoutes from "../Routes/admin and owner Routes.js";
 import OwnerRoutes from "../Routes/ownerRoutes.js";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
-import cors from "cors";
+
 import cloudinary from "cloudinary";
 
 const app = express();
 
-const envFilepath = join(process.cwd(), "Backend", "Config", ".env");
-dotenv.config({ path: envFilepath });
+if (process.env.PRODUCTION !== "true") {
+  import dotenv from "dotenv";
+  const envFilepath = join(process.cwd(), "Backend", "Config", ".env");
+  dotenv.config({ path: envFilepath });
+}
 
 app.use(fileUpload({ useTempFiles: true }));
 
@@ -28,14 +31,16 @@ process.on("uncaughtException", (err) => {
 });
 
 //  Configuration .env File
-
-app.use(
-  cors({
-    origin: process.env.FRONTENT_SIDE_URL,
-    credentials: true,
-    optionsSuccessStatus: 200,
-  })
-);
+if (process.env.PRODUCTION !== "true") {
+  import cors from "cors";
+  app.use(
+    cors({
+      origin: process.env.FRONTENT_SIDE_URL,
+      credentials: true,
+      optionsSuccessStatus: 200,
+    })
+  );
+}
 
 //   Connect Data Base
 connectDb();
