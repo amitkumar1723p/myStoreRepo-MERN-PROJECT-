@@ -203,7 +203,7 @@
      color: blue !important;
  }
 
- 
+
 
  @media screen and (min-width:0px) and (max-width:1000px) {
      .maincontainer {
@@ -231,7 +231,7 @@
 
      .asideParent {
          align-self: flex-start;
-         position: sticky;
+         position: fixed;
          background-color: rgb(255, 255, 255);
          left: 10px;
          top: 90px;
@@ -291,7 +291,7 @@
 
  }
 
- 
+
 
  @media screen and (min-width:0px) and (max-width:430px) {
      .allproductcontainer {
