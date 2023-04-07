@@ -2,10 +2,10 @@
   "name": "ecommerce-app",
   "version": "1.0.0",
   "description": "Ths is a Mern Ecommerce Project ",
-  "main": "./Backend/MainFile/app.js",
+  "main": "./Backend/mainFile/app.js",
   "scripts": {
-    "dev": " nodemon ./Backend/MainFile/app.js -e js",
-    "start": "node ./Backend/MainFile/app.js"
+    "dev": " nodemon ./Backend/mainFile/app.js -e js",
+    "start": "node ./Backend/mainFile/app.js"
   },
   "author": "Amit",
   "type": "module",
