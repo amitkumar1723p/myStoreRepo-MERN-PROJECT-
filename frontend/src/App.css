@@ -9,6 +9,7 @@
 
     .maindiv {
         /* min-height: calc(100vh - 77px - 123px); */
+        overflow: auto;
         display: flex;
         flex-direction: column;
     }
