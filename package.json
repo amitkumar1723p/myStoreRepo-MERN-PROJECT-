@@ -2,7 +2,7 @@
   "name": "ecommerce-app",
   "version": "1.0.0",
   "description": "Ths is a Mern Ecommerce Project ",
-  "main": "./Backend/MainFile/server.js",
+  "main": "./Backend/MainFile/app.js",
   "scripts": {
     "dev": " nodemon ./Backend/MainFile/app.js -e js",
     "start": "node ./Backend/MainFile/app.js"
