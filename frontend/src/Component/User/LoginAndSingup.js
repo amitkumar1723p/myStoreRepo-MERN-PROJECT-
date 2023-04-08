@@ -127,6 +127,7 @@ export default function LoginAndSingup() {
           setOtpValue("");
         }
         if (data.userCreated === true) {
+          dispatch(GetMeDetails());
           setUserDetails({
             name: "",
             email: "",
@@ -134,7 +135,6 @@ export default function LoginAndSingup() {
             password: "",
             userimage: "",
           });
-          dispatch(GetMeDetails());
 
           setTimeout(() => {
             navigate("/profile");
@@ -142,11 +142,11 @@ export default function LoginAndSingup() {
         }
 
         if (data.login === true) {
-          setLoginDetails({ password: "", email: "" });
           dispatch(GetMeDetails());
+          setLoginDetails({ password: "", email: "" });
           setTimeout(() => {
             navigate("/profile");
-          }, 1000);
+          }, 2000);
         }
 
         dispatch({ type: UserClear });

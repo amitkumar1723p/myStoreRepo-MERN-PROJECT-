@@ -171,7 +171,7 @@ export default function Icons() {
         setImgaUrl(loginicon);
       }
     }
-  }, [imgeUrl, userdata]);
+  }, [imgeUrl, userdata, setImgaUrl]);
 
   return (
     <>

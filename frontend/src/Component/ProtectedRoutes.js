@@ -14,7 +14,9 @@ export default function ProtectedRoutes({ Component, isAdmin, isOwner }) {
   useEffect(() => {
     if (userdata) {
       if (userdata.success == false) {
-        dispatch(AlertAction("Error", userdata.error, null));
+        setTimeout(() => {
+          dispatch(AlertAction("Error", userdata.error, null));
+        }, 500);
         setTimeout(() => {
           // ClearAlert
           dispatch({ type: ClearAlert });
