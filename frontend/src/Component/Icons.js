@@ -189,7 +189,7 @@ export default function Icons() {
           // document.body.style.background="white"
         }}
       >
-        <img src={mgeUrl} alt="userImage" className="objectimg" />
+        <img src={imgeUrl} alt="userImage" className="objectimg" />
 
         {iconArr.map(({ Icon, IconName, navigatepath }, index) => {
           return (
