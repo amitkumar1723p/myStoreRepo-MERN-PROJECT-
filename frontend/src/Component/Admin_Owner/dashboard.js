@@ -130,12 +130,14 @@ export default function Dashboard() {
 
           if (totalvalue[1]) {
             if (totalvalue[1].length == 1) {
-              settotalPrice(`${totalvalue[0]}.${totalvalue[1][0]}`);
+              settotalPrice(Number(`${totalvalue[0]}.${totalvalue[1][0]}`));
             }
 
             if (totalvalue[1].length >= 2) {
               settotalPrice(
-                `${totalvalue[0]}.${totalvalue[1][0]}${totalvalue[1][1]}`
+                Number(
+                  `${totalvalue[0]}.${totalvalue[1][0]}${totalvalue[1][1]}`
+                )
               );
             }
           }

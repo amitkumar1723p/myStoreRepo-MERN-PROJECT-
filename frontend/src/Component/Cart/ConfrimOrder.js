@@ -32,17 +32,16 @@ export default function ConfrimOrder() {
   const shippingCharges = subtotal > 500 ? 0 : 50;
 
   let Gst = subtotal * 0.18;
-
   if (String(Gst).includes(".")) {
     let Gstvalue = String(Gst).split(".");
 
     if (Gstvalue[1]) {
       if (Gstvalue[1].length == 1) {
-        Gst = `${Gstvalue[0]}.${Gstvalue[1][0]}`;
+        Gst = Number(`${Gstvalue[0]}.${Gstvalue[1][0]}`);
       }
 
       if (Gstvalue[1].length >= 2) {
-        Gst = `${Gstvalue[0]}.${Gstvalue[1][0]}${Gstvalue[1][1]}`;
+        Gst = Number(`${Gstvalue[0]}.${Gstvalue[1][0]}${Gstvalue[1][1]}`);
       }
     }
   }
@@ -54,11 +53,13 @@ export default function ConfrimOrder() {
 
     if (totalvalue[1]) {
       if (totalvalue[1].length == 1) {
-        totalPrice = `${totalvalue[0]}.${totalvalue[1][0]}`;
+        totalPrice = Number(`${totalvalue[0]}.${totalvalue[1][0]}`);
       }
 
       if (totalvalue[1].length >= 2) {
-        totalPrice = `${totalvalue[0]}.${totalvalue[1][0]}${totalvalue[1][1]}`;
+        totalPrice = Number(
+          `${totalvalue[0]}.${totalvalue[1][0]}${totalvalue[1][1]}`
+        );
       }
     }
   }
