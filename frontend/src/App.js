@@ -247,17 +247,14 @@ function App() {
               />
             }
           />
-
           <Route
-            path="/*"
-            element={
-              location.pathname !== "/process/payment" && <Navigate to={"/"} />
-            }
+            exact
+            path="/process/payment"
+            element={<ProtectedRoutes Component={Payments} />}
           />
-
-          
+          <Route path="/*" element={<Navigate to={"/"} />} />
         </Routes>
-
+        {/* 
         <Elements stripe={loadStripe(process.env.REACT_APP_PublicKey)}>
           <Routes>
             <Route
@@ -266,7 +263,7 @@ function App() {
               element={<ProtectedRoutes Component={Payments} />}
             />
           </Routes>
-        </Elements>
+        </Elements> */}
       </div>
       <Footer />
     </>

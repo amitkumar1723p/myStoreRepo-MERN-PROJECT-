@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Loader from "../Loader/loader";
 import Helmet from "../Helmet";
@@ -121,7 +121,7 @@ export default function UserProfile() {
                   {showdelete === true && (
                     <button
                       onClick={() => {
-                        navigate("/profileEdit");  
+                        navigate("/profileEdit");
                       }}
                     >
                       {" "}

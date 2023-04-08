@@ -3,14 +3,14 @@ import axios from "axios";
 import "./payment.css";
 import CheckoutStep from "./CheckoutStep";
 import CancelIcon from "@mui/icons-material/Cancel";
-import {
-  CardNumberElement,
-  CardCvcElement,
-  CardExpiryElement,
-  useStripe,
-  useElements,
-  Elements,
-} from "@stripe/react-stripe-js";
+// import {
+//   CardNumberElement,
+//   CardCvcElement,
+//   CardExpiryElement,
+//   useStripe,
+//   useElements,
+//   Elements,
+// } from "@stripe/react-stripe-js";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import { Link } from "react-router-dom";
 import EventIcon from "@mui/icons-material/Event";
@@ -52,12 +52,12 @@ export default function Payment() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const stripe = useStripe();
-  const elements = useElements();
+  // const stripe = useStripe();
+  // const elements = useElements();
 
   const Payment_Submit = async (e) => {
     e.preventDefault();
-    setShowAlert(false);
+    // setShowAlert(false);
 
     if (orderInfo && cartItems && shipping_Info) {
       const order = {
@@ -72,119 +72,123 @@ export default function Payment() {
       try {
         setButtonDisabled(true);
         setLoading(true);
-        setShowAlert(false);
+        // setShowAlert(false);
 
         const config = {
           header: { "Content-type": "application/json" },
           withCredentials: true,
         };
-        const paymentData = { amount: orderInfo.totalPrice * 100 };
-        const { data } = await axios.post(
-          `/user/payment/process`,
-          paymentData,
-          config
-        );
-        const client_secret = data.client_secret;
+        // const paymentData = { amount: orderInfo.totalPrice * 100 };
+        // const { data } = await axios.post(
+        //   `/user/payment/process`,
+        //   paymentData,
+        //   config
+        // );
+        // const client_secret = data.client_secret;
 
-        if (!stripe || !elements) {
-          setButtonDisabled(false);
-          setLoading(false);
-          return;
-        }
+        // if (!stripe || !elements) {
+        //   setButtonDisabled(false);
+        //   setLoading(false);
+        //   return;
+        // }
 
-        const result = await stripe.confirmCardPayment(client_secret, {
-          payment_method: {
-            card: elements.getElement(CardNumberElement),
-            billing_details: {
-              name: userdata.user.name,
-              email: userdata.user.email,
-              address: {
-                line1: shipping_Info.address,
-                city: shipping_Info.city,
-                state: shipping_Info.state,
-                postal_code: shipping_Info.pinCode,
-                country: shipping_Info.country,
-              },
-            },
-          },
+        // const result = await stripe.confirmCardPayment(client_secret, {
+        //   payment_method: {
+        //     card: elements.getElement(CardNumberElement),
+        //     billing_details: {
+        //       name: userdata.user.name,
+        //       email: userdata.user.email,
+        //       address: {
+        //         line1: shipping_Info.address,
+        //         city: shipping_Info.city,
+        //         state: shipping_Info.state,
+        //         postal_code: shipping_Info.pinCode,
+        //         country: shipping_Info.country,
+        //       },
+        //     },
+        //   },
+        // });
+
+        // if (result.error) {
+        //   // payBtn.current.disabled = false;
+        //   setButtonDisabled(false);
+        //   setLoading(false);
+        //   setShowAlert(true);
+
+        //   setAlertDetails({
+        //     AlertType: "Error",
+        //     AlertMessage: result.error.message,
+        //   });
+        // }
+
+        // else {
+        // if ((result.paymentIntent.status = "succeeded")) {
+        order.paymentInfo = {
+          PaymentId: "12345678912",
+          status: "succeeded",
+        };
+
+        setShowAlert(true);
+        setAlertDetails({
+          AlertType: "Success",
+          AlertMessage: "Submit Your Payment ",
         });
+        setpayment(true);
 
-        if (result.error) {
-          // payBtn.current.disabled = false;
-          setButtonDisabled(false);
-          setLoading(false);
-          setShowAlert(true);
+        localStorage.removeItem("cartItems");
+        localStorage.removeItem("shippingInfo");
+        sessionStorage.removeItem("orderInfo");
 
-          setAlertDetails({
-            AlertType: "Error",
-            AlertMessage: result.error.message,
-          });
-        } else {
-          if ((result.paymentIntent.status = "succeeded")) {
-            order.paymentInfo = {
-              PaymentId: result.paymentIntent.id,
-              status: result.paymentIntent.status,
-            };
+        setTimeout(async () => {
+          try {
+            setShowAlert(false);
 
+            const { data } = await axios.post(
+              `/user/createneworder`,
+              order,
+              config
+            );
+            if (data.success === true) {
+            }
+
+            setTimeout(() => {
+              navigate("/me/orders");
+
+              dispatch({ type: AllCartClear });
+            }, 1000);
             setShowAlert(true);
             setAlertDetails({
               AlertType: "Success",
-              AlertMessage: "Submit Your Payment ",
+              AlertMessage: data.message,
             });
-            setpayment(true);
+          } catch (error) {
+            setLoading(true);
 
-            localStorage.removeItem("cartItems");
-            localStorage.removeItem("shippingInfo");
-            sessionStorage.removeItem("orderInfo");
-
-            setTimeout(async () => {
-              try {
-                setShowAlert(false);
-
-                const { data } = await axios.post(
-                  `/user/createneworder`,
-                  order,
-                  config
-                );
-                if (data.success === true) {
-                }
-
-                setTimeout(() => {
-                  navigate("/me/orders");
-
-                  dispatch({ type: AllCartClear });
-                }, 1000);
-                setShowAlert(true);
-                setAlertDetails({
-                  AlertType: "Success",
-                  AlertMessage: data.message,
-                });
-              } catch (error) {
-                setLoading(true);
-
-                if (error.response) {
-                  setShowAlert(true);
-                  setAlertDetails({
-                    AlertType: "Error",
-                    AlertMessage: error.response.data.error,
-                  });
-                } else {
-                  setShowAlert(true);
-                  setAlertDetails({
-                    AlertType: "Error",
-                    AlertMessage: error.message,
-                  });
-                }
-              }
-            }, 5000);
-          } else {
-            setShowAlert(true);
-            setAlertDetails({
-              AlertType: "Error",
-              AlertMessage: "There 's some issue whiele processing payment",
-            });
+            if (error.response) {
+              setShowAlert(true);
+              setAlertDetails({
+                AlertType: "Error",
+                AlertMessage: error.response.data.error,
+              });
+            } else {
+              setShowAlert(true);
+              setAlertDetails({
+                AlertType: "Error",
+                AlertMessage: error.message,
+              });
+            }
           }
-        }
+        }, 3000);
+        // }
+
+        //  else {
+        //   setShowAlert(true);
+        //   setAlertDetails({
+        //     AlertType: "Error",
+        //     AlertMessage: "There 's some issue whiele processing payment",
+        //   });
+        // }
+        // }
       } catch (error) {
         setButtonDisabled(false);
         setLoading(false);
@@ -243,20 +247,27 @@ export default function Payment() {
 
                   <div className="Payment_Input_First">
                     <CreditCardIcon className="Payment_Input_label" />
-                    <CardNumberElement className="Payment_Input" />
+
+                    <input
+                      type="text"
+                      className="Payment_Input"
+                      value="4000 0000 0000 5126"
+                      readOnly
+                    />
+                    {/* <CardNumberElement /> */}
                   </div>
                   <small className="cardNumber">
                     {" "}
-                    use This card Number <span>4000 0000 0000 5126</span>{" "}
+                    use This card Number <span></span>{" "}
                   </small>
                   <div>
                     <EventIcon className="Payment_Input_label" />
-                    <CardExpiryElement className="Payment_Input" />
+                    <input type="text" className="Payment_Input" value="4/12" />
                   </div>
 
                   <div>
                     <VpnKeyIcon className="Payment_Input_label" />
-                    <CardCvcElement className="Payment_Input" />
+                    <input type="text" className="Payment_Input" value="123" />
                   </div>
 
                   <button disabled={buttondisabled == true ? true : false}>

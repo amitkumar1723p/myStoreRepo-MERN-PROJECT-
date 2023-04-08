@@ -1,5 +1,3 @@
-import { AddtoCart } from "../Constant/CartConstant";
-
 import {
   All_Products_Request,
   All_Products_Success,
@@ -36,7 +34,6 @@ import {
   UpdateProduct_Fail,
   Delete_Review_Request,
   Delete_Review_Success,
-  Delete_Review_Fail,
   Delete_Review_Clear,
 } from "../Constant/ProductContanst";
 
@@ -194,7 +191,6 @@ export const SubmitReviewReducer = (state = {}, action) => {
       };
 
     case SubmitReview_Success:
-    case Delete_Review_Success:
       return {
         ...state,
         loading: false,
@@ -260,4 +256,3 @@ export const CreateProductReducer = (state = {}, action) => {
       };
   }
 };
-
