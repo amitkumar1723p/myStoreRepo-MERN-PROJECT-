@@ -90,6 +90,7 @@ export default function Icons() {
   }, [dispatch, userlogoutdata]);
 
   useEffect(() => {
+    setImgaUrl(loginicon);
     if (userdata) {
       if (userdata.IsAuthenticated === true) {
         if (userdata.user.role == "admin" || userdata.user.role == "owner") {
@@ -171,7 +172,7 @@ export default function Icons() {
         setImgaUrl(loginicon);
       }
     }
-  }, [imgeUrl, userdata, setImgaUrl]);
+  }, [userdata]);
 
   return (
     <>
@@ -188,9 +189,7 @@ export default function Icons() {
           // document.body.style.background="white"
         }}
       >
-        <object data={imgeUrl} className="objectimg">
-          <img src={loginicon} alt="" />
-        </object>
+        <img src={mgeUrl} alt="userImage" className="objectimg" />
 
         {iconArr.map(({ Icon, IconName, navigatepath }, index) => {
           return (
