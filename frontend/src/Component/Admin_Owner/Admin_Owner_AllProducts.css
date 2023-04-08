@@ -168,7 +168,9 @@
     }
 
     .getProductContent {
+        margin-top: 0;
         margin: auto !important;
+
         width: 100%;
         font-size: 13px;
 
@@ -176,7 +178,7 @@
 
     .ProductHeadContainer {
         top: 70px;
-        padding-top: 53px;
+        padding-top: 60px;
 
     }
 

@@ -121,6 +121,7 @@
 
     .getUserContent {
         margin: auto !important;
+        margin-top: 0 !important;
         width: 100%;
         font-size: 13px;
 
@@ -128,7 +129,7 @@
 
     .getUserHeadContainer {
         top: 70px;
-        padding-top: 53px;
+        padding-top: 60px;
 
     }
 

@@ -9,7 +9,6 @@
 
     .maindiv {
         /* min-height: calc(100vh - 77px - 123px); */
-        overflow: auto;
         display: flex;
         flex-direction: column;
     }
@@ -28,6 +27,7 @@
     }
 
     .goBack {
+        z-index: 1;
         padding: 9px 14px;
         background: rgb(0, 187, 255);
         border: navajowhite;

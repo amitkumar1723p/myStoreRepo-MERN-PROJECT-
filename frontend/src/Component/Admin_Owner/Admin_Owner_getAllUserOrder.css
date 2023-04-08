@@ -113,13 +113,14 @@
 
     .getOrdersContent {
         margin: auto !important;
+        margin-top: 0px !important;
         width: 100%;
         font-size: 13px;
     }
 
     .getOrdersHeadContainer {
         top: 70px;
-        padding-top: 53px;
+        padding-top: 60px;
     }
 
     .getOrders_tabelFlex {
