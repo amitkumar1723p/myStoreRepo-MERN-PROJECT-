@@ -58,7 +58,9 @@ app.get("*", function (req, res) {
 });
 //    Server Listen Code .
 const port = process.env.PORT;
-let server = app.listen(port);
+let server = app.listen(port, () => {
+  console.log(port);
+});
 
 process.on("unhandledRejection", (err) => {
   server.close(() => {
