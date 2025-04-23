@@ -5,5 +5,6 @@ const connectDb = async () => {
 
   mongoose.set("strictQuery", true);
   await mongoose.connect(connectionUri);
+   console.log("database connect")
 };
 export default connectDb;

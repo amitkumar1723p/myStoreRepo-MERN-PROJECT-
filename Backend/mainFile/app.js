@@ -53,15 +53,15 @@ app.use("/user", UserRouter);
 app.use("/admin/owner", AdminAndDbOwnerRoutes);
 app.use("/owner", OwnerRoutes);
 
-app.use(express.static(join(process.cwd(), "frontend", "build")));
+// app.use(express.static(join(process.cwd(), "frontend", "build")));
 
-app.get("*", function (req, res) {
-  res.sendFile(join(process.cwd(), "frontend", "build", "index.html"));
-});
+// app.get("*", function (req, res) {
+//   res.sendFile(join(process.cwd(), "frontend", "build", "index.html"));
+// });
 
 // Add a temporary route to check the server's IP
 app.get('/my-ip', async (req, res) => {
-  const ip = await axios.get('https://ifconfig.me/ip');
+  const ip = await axios.get('https://api.ipify.org');
   res.send(`Outgoing IP: ${ip.data}`);
 })
 
