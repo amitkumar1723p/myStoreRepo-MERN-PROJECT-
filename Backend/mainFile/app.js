@@ -27,6 +27,7 @@ cloudinary.config({
 });
 
 process.on("uncaughtException", (err) => {
+   console.log(err ,"uncaughtException -error")
   process.exit(1);
 });
 
@@ -71,6 +72,7 @@ let server = app.listen(port, () => {
 });
 
 process.on("unhandledRejection", (err) => {
+  console.log(err , "unhandledRejection - error")
   server.close(() => {
     process.exit(1);
   });
