@@ -10,6 +10,7 @@ import fileUpload from "express-fileupload";
 import dotenv from "dotenv";
 import cloudinary from "cloudinary";
 import cors from "cors";
+import axios from "axios"
 const app = express();
 
 if (process.env.PRODUCTION !== "true") {
@@ -56,6 +57,13 @@ app.use(express.static(join(process.cwd(), "frontend", "build")));
 app.get("*", function (req, res) {
   res.sendFile(join(process.cwd(), "frontend", "build", "index.html"));
 });
+
+// Add a temporary route to check the server's IP
+app.get('/my-ip', async (req, res) => {
+  const ip = await axios.get('https://ifconfig.me/ip');
+  res.send(`Outgoing IP: ${ip.data}`);
+})
+
 //    Server Listen Code .
 const port = process.env.PORT;
 let server = app.listen(port, () => {
