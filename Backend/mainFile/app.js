@@ -26,10 +26,10 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-process.on("uncaughtException", (err) => {
-   console.log(err ,"uncaughtException -error")
-  process.exit(1);
-});
+// process.on("uncaughtException", (err) => {
+//    console.log(err ,"uncaughtException -error")
+//   process.exit(1);
+// });
 
 //  Configuration .env File
 if (process.env.PRODUCTION !== "true") {
@@ -49,9 +49,9 @@ connectDb();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/user", UserRouter);
-app.use("/admin/owner", AdminAndDbOwnerRoutes);
-app.use("/owner", OwnerRoutes);
+// app.use("/user", UserRouter);
+// app.use("/admin/owner", AdminAndDbOwnerRoutes);
+// app.use("/owner", OwnerRoutes);
 
 // app.use(express.static(join(process.cwd(), "frontend", "build")));
 
@@ -71,9 +71,9 @@ let server = app.listen(port, () => {
   console.log(port);
 });
 
-process.on("unhandledRejection", (err) => {
-  console.log(err , "unhandledRejection - error")
-  server.close(() => {
-    process.exit(1);
-  });
-});
+// process.on("unhandledRejection", (err) => {
+//   console.log(err , "unhandledRejection - error")
+//   server.close(() => {
+//     process.exit(1);
+//   });
+// });
